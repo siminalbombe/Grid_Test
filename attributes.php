@@ -7,7 +7,7 @@
  */
 
 
-function displayTablefor6Attributes() : void
+function displayTablefor6Attributes()
 {
     echo "<table>";
     for ($row=0;$row<=2;$row++) {
@@ -27,15 +27,13 @@ function displayRowInTable($row)
 
 function displayFieldInTable($row, $index)
 {
-    echo "<td><input type=\"text\" action=\"bigTable.php\" name=\".$row.\"_\".$index\"> </input>";
+    $name = $row."_".$index;
+    echo "<td><input type=\"text\" action=\"bigTable.php\" name=\"$name\" > </input></td>";
 }
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,26 +49,29 @@ function displayFieldInTable($row, $index)
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung angand der folgenden Aussagen mit mindestens 3 bis maximal 6 Adjektiven. </p>
 
 <form>
-    1. So bin ich und so möchte ich auch bleiben</br>
+    1. So bin ich und so möchte ich auch bleiben
     <?php
     displayTablefor6Attributes();
     ?>
 
-    2. So möchte ich nicht werden</br>
+    </br>2. So möchte ich nicht werden
     <?php
     displayTablefor6Attributes();
     ?>
 
-    3. Folgende Eigenschaften mag ich an mir selbst nicht</br>
+    </br>3. Folgende Eigenschaften mag ich an mir selbst nicht
     <?php
     displayTablefor6Attributes();
     ?>
 
-    4. Manchmal wünschte ich mir, ich wäre so</br>
+    </br>4. Manchmal wünschte ich mir, ich wäre so
     <?php
     displayTablefor6Attributes();
     ?>
+
+    <input type="submit" value="Send all attributes"></input>
 </form>
+
 
 </body>
 </html>
