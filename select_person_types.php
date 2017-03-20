@@ -1,13 +1,15 @@
 <?php
 
-function printTable($string){
+function printTableHeader($string){
+    echo "<th>".$string."</th>";
+}
+function printTableRow10times($string){
     echo "<tr>";
-    for ($i=1; $i<=10; $i++){
+    for ($i=0; $i<=9; $i++){
         echo $string;
     }
     echo "</tr>";
 }
-
 /**
  * @param $conn
  * @param $selectPersonTypes
@@ -22,7 +24,6 @@ function getAllPersonTypesFromDB($conn, $selectPersonTypes): array
     }
     return $persontypes;
 }
-
 /**
  * @param $row
  * @param $persontypes
@@ -70,28 +71,20 @@ function getAllColumns($row, $persontypes)
     $persontypes[$i] = $row['nineteenth'];
     $i++;
     $persontypes[$i] = $row['twentieth'];
-    $i++;
     return $persontypes;
 }
 
-echo "<table border=\"1\">";
-
-$printColumnHeader = "<th class=\"vertical-text\"> Type </th>";
-printTable($printColumnHeader);
-
-for ($i=0; $i<=12; $i++){
-    $printRadioButtons ="<td><input type=\"radio\">  </input></td>";
-    printTable($printRadioButtons);
-}
-echo "</table>";
-
+echo "<table border=\"1\" align=\"center\">";
 $selectPersonTypes = "select * from test.persontype";
-
 $persontypes = getAllPersonTypesFromDB($conn, $selectPersonTypes);
 
-foreach ($persontypes as $value){
-    echo "<p>".$value."</p>";
+
+for ($i=0; $i<=9; $i++){
+    printTableHeader($persontypes[$i]);
 }
 
-
-
+for ($i=0; $i<=12; $i++){
+    $printRadioButtons ="<td><input type=\"radio\" class=\"radio\">  </input></td>";
+    printTableRow10times($printRadioButtons);
+}
+echo "</table>";
