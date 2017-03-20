@@ -75,7 +75,7 @@ function getAllColumns($row, $persontypes)
 }
 
 echo "<table border=\"1\" align=\"center\">";
-$selectPersonTypes = "select * from test.persontype";
+$selectPersonTypes = "select * from test.persontype where ID=1";
 $persontypes = getAllPersonTypesFromDB($conn, $selectPersonTypes);
 
 
