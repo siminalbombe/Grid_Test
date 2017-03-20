@@ -18,6 +18,7 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 </head>
 
 <body>
+
     <div>
         <form action="attributes.php">
             <input type="submit" value="Start survey" />

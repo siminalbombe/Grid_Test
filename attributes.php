@@ -8,7 +8,7 @@
 
 
 function displayRowInTable(){
-    echo    "<tr><td><input type=\"text\"> </input></td><td><input type=\"text\"> </input></td></tr>";
+    echo    "<tr><td><input type=";text;"> </input></td><td><input type=";text;"> </input></td></tr>";
 }
 function displayTable(){
     echo "<table>";
