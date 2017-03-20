@@ -69,7 +69,7 @@ function displayFieldInTable($row, $index)
     displayTablefor6Attributes();
     ?>
 
-    <input type="submit" value="Send all attributes"></input>
+    </br><input type="submit" value="Send all attributes" action="bigTable.php" method="post"></input>
 </form>
 
 
