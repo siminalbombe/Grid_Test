@@ -84,7 +84,7 @@ for ($i=0; $i<=9; $i++){
 }
 
 for ($i=0; $i<=12; $i++){
-    $printRadioButtons ="<td><input type=\"radio\" class=\"radio\">  </input></td>";
-    printTableRow10times($printRadioButtons);
+    $printCheckBoxes ="<td><input type=\"checkbox\" class=\"checkbox\">  </input></td>";
+    printTableRow10times($printCheckBoxes);
 }
 echo "</table>";

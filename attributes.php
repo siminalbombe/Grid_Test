@@ -7,16 +7,30 @@
  */
 
 
-function displayRowInTable(){
-    echo    "<tr><td><input type=";text;"> </input></td><td><input type=";text;"> </input></td></tr>";
-}
-function displayTable(){
+function displayTablefor6Attributes() : void
+{
     echo "<table>";
-    for ($i=0;i<=2;$i++) {
-        displayRowInTable();
+    for ($row=0;$row<=2;$row++) {
+        displayRowInTable($row);
     }
     echo "</table>";
 }
+
+function displayRowInTable($row)
+{
+    echo "<tr>";
+    for ($index=0;$index<=1;$index++){
+        displayFieldInTable($row, $index);
+    }
+    echo "</tr>";
+}
+
+function displayFieldInTable($row, $index)
+{
+    echo "<td><input type=\"text\" action=\"bigTable.php\" name=\".$row.\"_\".$index\"> </input>";
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,26 +47,28 @@ function displayTable(){
 </head>
 
 <body>
+<h2 align="center">Grid-Umfrage Teil II</h2>
+<p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung angand der folgenden Aussagen mit mindestens 3 bis maximal 6 Adjektiven. </p>
 
 <form>
     1. So bin ich und so möchte ich auch bleiben</br>
     <?php
-    displayTable();
+    displayTablefor6Attributes();
     ?>
 
     2. So möchte ich nicht werden</br>
     <?php
-    displayTable();
+    displayTablefor6Attributes();
     ?>
 
     3. Folgende Eigenschaften mag ich an mir selbst nicht</br>
     <?php
-    displayTable();
+    displayTablefor6Attributes();
     ?>
 
     4. Manchmal wünschte ich mir, ich wäre so</br>
     <?php
-    displayTable();
+    displayTablefor6Attributes();
     ?>
 </form>
 

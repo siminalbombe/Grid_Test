@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
-//include 'script/select_pdo.php';
 ?>
 
 <!DOCTYPE html>
