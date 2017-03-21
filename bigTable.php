@@ -34,10 +34,11 @@ function getFieldNumber(){
 
 <body>
 <h2>Grid-Umfrage Teil II</h2>
-<form method="post">
+<form>
     <?php
     include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\select_person_types.php';
     ?>
+
 </form>
 
 </body>

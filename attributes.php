@@ -30,6 +30,8 @@ function displayFieldInTable($tablenr, $row, $index)
     $name = $tablenr."_".$row."_".$index;
     echo "<td><input type=\"text\" name=\"$name\"></td>";
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ function displayFieldInTable($tablenr, $row, $index)
 
 <body>
 <h2>Grid-Umfrage Teil I</h2>
-<p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung angand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
+<p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
 <form method="get" action="bigTable.php">
     1. So bin ich und so möchte ich auch bleiben
