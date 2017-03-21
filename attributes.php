@@ -74,12 +74,9 @@ function displayFieldInTable($tablenr, $row, $index)
     <?php
     displayTablefor6Attributes($tablenr);
     ?>
-    <input type="submit" value="use this attributes">
+    <input type="submit" value="use this attributes" class="button">
 </form>
 
 
 </body>
 </html>
-
-
-
