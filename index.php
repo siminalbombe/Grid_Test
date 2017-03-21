@@ -2,7 +2,6 @@
 session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -17,11 +16,15 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 </head>
 
 <body>
-
-    <div>
-        <form action="attributes.php">
-            <input type="submit" value="Start survey" />
+<h2>Grid-Start Page</h2>
+    <div align="center">
+        <form action="attributes.php" method="post" >
+            <input type="submit" value="Start survey" class="button">
         </form>
+        <form action="login.php">
+            <input type="submit" value="Log In" class="button""><br>
+        </form>
+
     </div>
 
 

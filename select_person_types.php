@@ -74,17 +74,18 @@ function getAllColumns($row, $persontypes)
     return $persontypes;
 }
 
-echo "<table border=\"1\" align=\"center\">";
+
 $selectPersonTypes = "select * from test.persontype where ID=1";
 $persontypes = getAllPersonTypesFromDB($conn, $selectPersonTypes);
 
-
+print_r("<p>".$persontypes."</p>");
+echo "<table border=\"1\" align=\"center\">";
 for ($i=0; $i<=9; $i++){
     printTableHeader($persontypes[$i]);
 }
 
 for ($i=0; $i<=12; $i++){
-    $printCheckBoxes ="<td><input type=\"checkbox\" class=\"checkbox\">  </input></td>";
+    $printCheckBoxes ="<td><input type=\"checkbox\" class=\"checkbox\"></td>";
     printTableRow10times($printCheckBoxes);
 }
 echo "</table>";

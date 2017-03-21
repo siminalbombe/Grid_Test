@@ -7,28 +7,28 @@
  */
 
 
-function displayTablefor6Attributes()
+function displayTablefor6Attributes($tablenr)
 {
     echo "<table>";
     for ($row=0;$row<=2;$row++) {
-        displayRowInTable($row);
+        displayRowInTable($tablenr, $row);
     }
     echo "</table>";
 }
 
-function displayRowInTable($row)
+function displayRowInTable($tablenr,$row)
 {
     echo "<tr>";
     for ($index=0;$index<=1;$index++){
-        displayFieldInTable($row, $index);
+        displayFieldInTable($tablenr, $row, $index);
     }
     echo "</tr>";
 }
 
-function displayFieldInTable($row, $index)
+function displayFieldInTable($tablenr, $row, $index)
 {
-    $name = $row."_".$index;
-    echo "<td><input type=\"text\" action=\"bigTable.php\" name=\"$name\" > </input></td>";
+    $name = $tablenr."_".$row."_".$index;
+    echo "<td><input type=\"text\" name=\"$name\"></td>";
 }
 ?>
 
@@ -40,36 +40,40 @@ function displayFieldInTable($row, $index)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>GRID-Attributes</title>
+    <title>GRID-Teil I</title>
     <link rel="stylesheet" href="bootstrap_min.css">
 </head>
 
 <body>
-<h2 align="center">Grid-Umfrage Teil II</h2>
-<p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung angand der folgenden Aussagen mit mindestens 3 bis maximal 6 Adjektiven. </p>
+<h2>Grid-Umfrage Teil I</h2>
+<p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung angand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form>
+<form method="get" action="bigTable.php">
     1. So bin ich und so möchte ich auch bleiben
     <?php
-    displayTablefor6Attributes();
+    $tablenr = 0;
+    displayTablefor6Attributes($tablenr);
+    $tablenr++;
     ?>
 
-    </br>2. So möchte ich nicht werden
+    <br>2. So möchte ich nicht werden
     <?php
-    displayTablefor6Attributes();
+    displayTablefor6Attributes($tablenr);
+    $tablenr++;
     ?>
 
-    </br>3. Folgende Eigenschaften mag ich an mir selbst nicht
+    <br>3. Folgende Eigenschaften mag ich an mir selbst nicht
     <?php
-    displayTablefor6Attributes();
+    displayTablefor6Attributes($tablenr);
+    $tablenr++;
     ?>
 
-    </br>4. Manchmal wünschte ich mir, ich wäre so
+    <br>4. Manchmal wünschte ich mir, ich wäre so
     <?php
-    displayTablefor6Attributes();
+    displayTablefor6Attributes($tablenr);
     ?>
-
-    </br><input type="submit" value="Send all attributes" action="bigTable.php" method="post"></input>
+    <br>
+    <input type="submit" value="Use this attributes" class="button">
 </form>
 
 
