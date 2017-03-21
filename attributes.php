@@ -47,10 +47,10 @@ function displayFieldInTable($tablenr, $row, $index)
 </head>
 
 <body>
-<h2>Grid-Umfrage Teil I</h2>
+<h2>Grid-Attributes</h2>
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form method="get" action="bigTable.php">
+<form action="bigTable.php" method="get">
     1. So bin ich und so möchte ich auch bleiben
     <?php
     $tablenr = 0;
@@ -74,8 +74,7 @@ function displayFieldInTable($tablenr, $row, $index)
     <?php
     displayTablefor6Attributes($tablenr);
     ?>
-    <br>
-    <input type="submit" value="Use this attributes" class="button">
+    <input type="submit" value="use this attributes">
 </form>
 
 
