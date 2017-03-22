@@ -22,9 +22,9 @@
 <body>
 <h2>Grid-Group Key</h2>
 <div align="center">
-    <form action="persons.php" method="post" >
+    <form action="persons.php" method="get" >
         Please enter the Group-Key:<br>
-        <input type="text"><br>
+        <input type="text" name="gkey"<br>
         <input type="submit" value="Send Group Key" class="button""><br>
     </form>
 </div>

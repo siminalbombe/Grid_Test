@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -13,10 +17,13 @@
 <body>
 <h2>Grid - Teil II</h2>
 
+col 0_0_0:
 
+<?php
+$var = $_POST['0_0_0'];
+echo $var;
+?><br>
 
-col 0_0_0: <?php echo $_GET['0_0_0']; ?><br>
-col 0_0_1: <?php echo $_GET["0_0_1"]; ?>
 
 
 </body>

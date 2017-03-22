@@ -6,7 +6,6 @@
  * Time: 10:47
  */
 
-
 function displayTablefor6Attributes($tablenr)
 {
     echo "<table>";
@@ -28,6 +27,7 @@ function displayRowInTable($tablenr,$row)
 function displayFieldInTable($tablenr, $row, $index)
 {
     $name = $tablenr."_".$row."_".$index;
+    echo "<label for=\"".$name."\">$name</label>";
     echo "<td><input type=\"text\" name=\"$name\"></td>";
 }
 
@@ -50,7 +50,7 @@ function displayFieldInTable($tablenr, $row, $index)
 <h2>Grid-Attributes</h2>
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form action="bigTable.php" method="get">
+<form action="bigTable.php" method="post">
     1. So bin ich und so möchte ich auch bleiben
     <?php
     $tablenr = 0;

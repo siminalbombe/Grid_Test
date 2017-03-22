@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 ?>
 <!DOCTYPE html>
@@ -18,7 +17,7 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 <body>
 <h2>Grid-Start Page</h2>
     <div align="center">
-        <form action="groupkey.php" method="post" >
+        <form action="groupkey.php">
             <input type="submit" value="Start survey" class="button">
         </form>
         <form action="login.php">

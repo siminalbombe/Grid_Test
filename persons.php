@@ -44,6 +44,7 @@ function getAllPersonTypesForSpecificGroup(){
 getAllPersonTypesForSpecificGroup();
 createTable();
 
+echo $_POST['gkey'];
 ?>
 <div align="center">
     <form action="attributes.php" method="post" >
