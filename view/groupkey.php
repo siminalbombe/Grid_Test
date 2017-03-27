@@ -18,7 +18,6 @@
         Please enter the Group-Key:<br>
         <input type="text" name="gkey"<br>
         <input type="submit" value="Send Group Key" class="button""><br>
-
     </form>
 </div>
 </body>

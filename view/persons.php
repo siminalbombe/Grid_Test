@@ -23,7 +23,7 @@ include "connect/connect.php";
 </h2>
 
 <?php
-include 'select_person_types.php';
+include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\select_person_types.php';
 ?>
 
 <div align="center">

@@ -6,18 +6,26 @@ if ($ID=="")
     echo "no Group Key entered";
 echo $ID;
 $sql = "SELECT * FROM test.persontype WHERE ID = ?";
-$statement = $conn->prepare($sql);
-$statement->bind_param('i', $ID);
-$statement->execute();
 
-$result = $statement->get_result();
-$columnNames = $result->fetch_fields();
-//foreach ($columnNames as $val){
-//    echo "column name: ".$val."<br>";
-//}
+//TEST
 
-while($row = $result->fetch_assoc()) {
-    echo $row['first'];
+if ($stmt = $conn->prepare($sql)) {
 
+    /* execute statement */
+    $stmt->execute();
+
+    /* bind result variables */
+    $stmt->bind_result($FetchedID);
+
+    /* fetch values */
+    while ($stmt->fetch()) {
+        printf ("ID from DB %s<br>", $FetchedID);
+    }
+
+    /* close statement */
+    $stmt->close();
 }
-echo "<br>TEST";
+
+
+//TEST
+$conn->close();
