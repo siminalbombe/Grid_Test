@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Login</title>
-    <link rel="stylesheet" href="bootstrap_min.css">
+    <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>

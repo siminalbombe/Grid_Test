@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: simon.hofmann
- * Date: 22/03/2017
- * Time: 00:21
- */
-?>
 <!DOCTYPE html>
 <html lang="de">
 
@@ -16,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Group Key</title>
-    <link rel="stylesheet" href="bootstrap_min.css">
+    <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>
@@ -26,6 +18,7 @@
         Please enter the Group-Key:<br>
         <input type="text" name="gkey"<br>
         <input type="submit" value="Send Group Key" class="button""><br>
+
     </form>
 </div>
 </body>

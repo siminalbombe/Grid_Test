@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Grid-Teil II</title>
-    <link rel="stylesheet" href="bootstrap_min.css">
+    <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>

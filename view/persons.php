@@ -1,25 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: simon.hofmann
- * Date: 22/03/2017
- * Time: 00:22
- */
 
-function createTable(){
+include "connect/connect.php";
 
-}
-
-function checkForNullsIn($result){
-
-}
-
-function getAllPersonTypesForSpecificGroup(){
-
-    //get all types from database
-    //call "checkForNullIn" to delete all Null-values
-
-}
 ?>
 
 
@@ -33,7 +15,7 @@ function getAllPersonTypesForSpecificGroup(){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Persons</title>
-    <link rel="stylesheet" href="bootstrap_min.css">
+    <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 <body>
 <h2>
@@ -41,13 +23,11 @@ function getAllPersonTypesForSpecificGroup(){
 </h2>
 
 <?php
-getAllPersonTypesForSpecificGroup();
-createTable();
-
-echo $_POST['gkey'];
+include 'select_person_types.php';
 ?>
+
 <div align="center">
-    <form action="attributes.php" method="post" >
+    <form action="../attributes.php" method="post" >
         <input type="submit" class="button">
     </form>
 </div>

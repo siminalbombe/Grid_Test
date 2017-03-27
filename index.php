@@ -17,10 +17,10 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\connect.php';
 <body>
 <h2>Grid-Start Page</h2>
     <div align="center">
-        <form action="groupkey.php">
+        <form action="view/groupkey.php">
             <input type="submit" value="Start survey" class="button">
         </form>
-        <form action="login.php">
+        <form action="view/login.php">
             <input type="submit" value="Log In" class="button""><br>
         </form>
 
