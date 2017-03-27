@@ -5,27 +5,11 @@ echo "Group Key: ";
 if ($ID=="")
     echo "no Group Key entered";
 echo $ID;
-$sql = "SELECT * FROM test.persontype WHERE ID = ?";
 
-//TEST
+$select = "SELECT * FROM test.persontype ";
 
-if ($stmt = $conn->prepare($sql)) {
-
-    /* execute statement */
-    $stmt->execute();
-
-    /* bind result variables */
-    $stmt->bind_result($FetchedID);
-
-    /* fetch values */
-    while ($stmt->fetch()) {
-        printf ("ID from DB %s<br>", $FetchedID);
-    }
-
-    /* close statement */
-    $stmt->close();
+$result = $conn->query($select);
+while ($row2 = $result->fetch_assoc()) {
+    echo "{$row2['first']}";
 }
-
-
-//TEST
-$conn->close();
+echo "<br>TEST";

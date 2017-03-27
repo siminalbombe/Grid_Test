@@ -1,6 +1,6 @@
 <?php
 
-include "connect/connect.php";
+include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 
 ?>
 
@@ -24,6 +24,7 @@ include "connect/connect.php";
 
 <?php
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\select_person_types.php';
+$conn->close();
 ?>
 
 <div align="center">
