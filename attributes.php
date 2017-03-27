@@ -6,6 +6,8 @@
  * Time: 10:47
  */
 
+session_start();
+
 function displayTablefor6Attributes($tablenr)
 {
     echo "<table>";
@@ -53,6 +55,8 @@ function displayFieldInTable($tablenr, $row, $index)
 <form action="view/bigTable.php" method="post">
     1. So bin ich und so möchte ich auch bleiben
     <?php
+    echo $_SESSION['persons'];
+
     $tablenr = 0;
     displayTablefor6Attributes($tablenr);
     $tablenr++;

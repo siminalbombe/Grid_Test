@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 
 ?>
@@ -23,7 +23,8 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 </h2>
 
 <?php
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\select_person_types.php';
+include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\getAllPersonsFromDB.php';
+include  'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\displayPersonsForUser.php';
 $conn->close();
 ?>
 
