@@ -1,7 +1,8 @@
 <?php
 session_start();
+
 function printArray($value, $index){
-    if($index<=2){
+    if($index<=2){ //non relevant user values=2(ID, name, groupkey)
         return;
     }
     if ($value==""){
@@ -11,7 +12,6 @@ function printArray($value, $index){
         echo "<tr><td>".$value."</td>";
         echo "<td>"."<input name='".$index."'></td></tr>";
     }
-
 }
 
 

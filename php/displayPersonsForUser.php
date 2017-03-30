@@ -8,5 +8,4 @@
 session_start();
 $persons = $_SESSION['persons'];
 foreach ($persons as $value){
-    table
 }
