@@ -21,17 +21,13 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 <h2>
     Person Types for specific Group
 </h2>
+<form action="attributes.php" method="get" >
+    <?php
+    include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\getAllPersonsFromDB.php';
+    ?>
+    <input type="submit" class="button">
+</form>
 
-<?php
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\getAllPersonsFromDB.php';
-include  'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\displayPersonsForUser.php';
-$conn->close();
-?>
 
-<div align="center">
-    <form action="../attributes.php" method="post" >
-        <input type="submit" class="button">
-    </form>
-</div>
 </body>
 </html>

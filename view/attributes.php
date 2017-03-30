@@ -8,9 +8,19 @@
 
 session_start();
 
+$tablenr = 0;
+
+function displayTable($tablenr)
+{
+    displayTablefor6Attributes($tablenr);
+    $tablenr++;
+    return $tablenr;
+}
+
 function displayTablefor6Attributes($tablenr)
 {
     echo "<table>";
+    echo "<tr><td>Beschreibung</td><td>Gegenteil</td></tr>";
     for ($row=0;$row<=2;$row++) {
         displayRowInTable($tablenr, $row);
     }
@@ -29,9 +39,9 @@ function displayRowInTable($tablenr,$row)
 function displayFieldInTable($tablenr, $row, $index)
 {
     $name = $tablenr."_".$row."_".$index;
-    echo "<label for=\"".$name."\">$name</label>";
-    echo "<td><input type=\"text\" name=\"$name\"></td>";
+    echo "<td><input type=\"text\" name=\"$name\" required></td>";
 }
+
 
 
 ?>
@@ -45,38 +55,35 @@ function displayFieldInTable($tablenr, $row, $index)
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Teil I</title>
-    <link rel="stylesheet" href="bootstrap_min.css">
+    <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>
 <h2>Grid-Attributes</h2>
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form action="view/bigTable.php" method="post">
-    1. So bin ich und so möchte ich auch bleiben
+<form action="bigTable_0_10.php" method="get">
+    <h6>1. So bin ich und so möchte ich auch bleiben</h6>
     <?php
-    echo $_SESSION['persons'];
-
-    $tablenr = 0;
-    displayTablefor6Attributes($tablenr);
-    $tablenr++;
+    $tablenr = displayTable($tablenr);
     ?>
 
-    <br>2. So möchte ich nicht werden
+    <br>
+    <h6>2. So möchte ich nicht werden</h6>
     <?php
-    displayTablefor6Attributes($tablenr);
-    $tablenr++;
+    $tablenr = displayTable($tablenr);
     ?>
 
-    <br>3. Folgende Eigenschaften mag ich an mir selbst nicht
+    <br>
+    <h6>3. Folgende Eigenschaften mag ich an mir selbst nicht</h6>
     <?php
-    displayTablefor6Attributes($tablenr);
-    $tablenr++;
+    $tablenr = displayTable($tablenr);
     ?>
 
-    <br>4. Manchmal wünschte ich mir, ich wäre so
+    <br>
+    <h6>4. Manchmal wünschte ich mir, ich wäre so</h6>
     <?php
-    displayTablefor6Attributes($tablenr);
+    $tablenr = displayTable($tablenr);
     ?>
     <input type="submit" value="use this attributes" class="button">
 </form>

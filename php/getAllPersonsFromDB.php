@@ -35,10 +35,10 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $_SESSION['persons'] = $persons;
-echo "<table><form>";
+echo "<table>";
 $indexOfPersons=0;
 foreach ($persons as $val){
     printArray($val, $indexOfPersons);
     $indexOfPersons++;
 }
-echo "</form></table>";
+echo "</table>";
