@@ -42,8 +42,6 @@ function displayFieldInTable($tablenr, $row, $index)
     echo "<td><input type=\"text\" name=\"$name\" required></td>";
 }
 
-
-
 ?>
 
 <!DOCTYPE html>

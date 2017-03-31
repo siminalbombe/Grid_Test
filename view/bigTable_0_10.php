@@ -7,7 +7,6 @@ function getAttributesInArray(){
     $_SESSION['attributes'] = $temp;
     return $temp;
 }
-
 //iterate through all tables
 function iterateThroughTables(){
     $array = array();
@@ -16,7 +15,6 @@ function iterateThroughTables(){
     }
     return $array;
 }
-
 //iterate through all rows
 function iterateThroughRows($array, $table){
     for ($row=0; $row<=2; $row++){
@@ -24,7 +22,6 @@ function iterateThroughRows($array, $table){
     }
     return $array;
 }
-
 //Get attributes from Get/Post variable in every field
 function toggleField($array, $table, $row){
     for ($field=0; $field<=1; $field++){
@@ -33,11 +30,6 @@ function toggleField($array, $table, $row){
     }
     return $array;
 }
-
-function displayTable(){
-
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -58,10 +50,9 @@ function displayTable(){
 <?php
 $persons = $_SESSION['persons'];
 $attributes = getAttributesInArray();
-echo "<table>";
-displayTable();
-echo "</table>";
-
+//foreach ($attributes as $val)
+//    echo $val."<br>";
+include '../php/displayAttributesTableBIG.php';
 ?>
 
 </body>
