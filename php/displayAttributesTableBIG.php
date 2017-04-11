@@ -11,27 +11,42 @@ session_start();
 function displayTableForAttributes($array){
     $tablemax = 3;
     for ($i=0; $i<=$tablemax; $i++){
-        echo "<table>";
         $array = displayAllData($array);
-        echo "</table>";
     }
     return $array;
 }
 function displayAllData($array){
-   echo "<tr>";
-   echo "<td>".array_shift($array)."</td><td>".array_shift($array)."</td>";
+
+   $row = 2;
+   for ($i=0; $i<=$row; $i++){
+       echo "<tr>";
+       echo "<td>".array_shift($array)."</td><td>".array_shift($array)."</td>";
+       echo "</tr>";
+   }
+
    echo "</tr>";
    return $array;
 }
 
-function displayForEach($normal, $opposite){
-    foreach ($normal as $val){
-        echo "<tr>";
-        echo "<td>".$val."</td><td>".array_shift($opposite)."</td>";
-        echo "</tr>";
+function test($var, $count){
+    if ($count <= 2){
+        return;
     }
+    if ($var==""){
+        return;
+    }
+    echo $var."<br>";
 }
 
-$temp = $_SESSION['attributes'];
-$temp = displayTableForAttributes($temp, 0);
-$temp = displayTableForAttributes($temp, 2);
+$tempAttributes = $_SESSION['attributes'];
+$tempPersons = $_SESSION['persons'];
+$count = 0;
+foreach ($tempPersons as $val){
+    test($val, $count);
+    $count++;
+}
+
+
+echo "<table>";
+$tempAttributes = displayTableForAttributes($tempAttributes);
+echo "</table>";

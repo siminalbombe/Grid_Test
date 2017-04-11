@@ -14,6 +14,30 @@ function printArray($value, $index){
     }
 }
 
+function countPersons($array){
+    $array = remove_ID_Gkey_Name($array);
+    $array = removeNotExistentPersons($array);
+
+    return count($array);
+}
+
+function remove_ID_Gkey_Name($array){
+    for ($i=0; $i<=2; $i++){
+        array_shift($array);
+    }
+    return $array;
+}
+
+function removeNotExistentPersons($array){
+    $count=0;
+    foreach ($array as $val){
+        if ($val == ""){
+            unset($array[$count]);
+        }
+        $count++;
+    }
+    return $array;
+}
 
 $gkey = $_GET['gkey'];
 echo "Group Key: ";
@@ -35,6 +59,8 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $_SESSION['persons'] = $persons;
+$_SESSION['numberofpersons'] = countPersons($persons);
+echo $_SESSION['numberofpersons'];
 echo "<table>";
 $indexOfPersons=0;
 foreach ($persons as $val){
