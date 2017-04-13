@@ -16,19 +16,17 @@ function displayTableForAttributes($array){
     return $array;
 }
 function displayAllData($array){
-
    $row = 2;
    for ($i=0; $i<=$row; $i++){
        echo "<tr>";
        echo "<td>".array_shift($array)."</td><td>".array_shift($array)."</td>";
        echo "</tr>";
    }
-
    echo "</tr>";
    return $array;
 }
 
-function test($var, $count){
+function displayWithout_Name_ID_GKEY($var, $count){
     if ($count <= 2){
         return;
     }
@@ -38,11 +36,18 @@ function test($var, $count){
     echo $var."<br>";
 }
 
+function displayTypes(){
+
+}
+
+echo "<table style=\"border: #ddd\">";
+echo "<td>fdshusbhsfd</td>";
+echo "</table>";
 $tempAttributes = $_SESSION['attributes'];
 $tempPersons = $_SESSION['persons'];
 $count = 0;
 foreach ($tempPersons as $val){
-    test($val, $count);
+    displayWithout_Name_ID_GKEY($val, $count);
     $count++;
 }
 

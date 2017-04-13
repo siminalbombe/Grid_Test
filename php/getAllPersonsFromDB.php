@@ -60,7 +60,7 @@ while ($row = $result->fetch_assoc()) {
 
 $_SESSION['persons'] = $persons;
 $_SESSION['numberofpersons'] = countPersons($persons);
-echo $_SESSION['numberofpersons'];
+echo "Anzahl Typen: <b>".$_SESSION['numberofpersons']."</b>";
 echo "<table>";
 $indexOfPersons=0;
 foreach ($persons as $val){

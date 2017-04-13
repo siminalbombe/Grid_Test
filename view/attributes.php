@@ -60,7 +60,7 @@ function displayFieldInTable($tablenr, $row, $index)
 <h2>Grid-Attributes</h2>
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form action="bigTable_0_10.php" method="get">
+<form action="bigTable_0_5.php" method="get">
     <h6>1. So bin ich und so möchte ich auch bleiben</h6>
     <?php
     $tablenr = displayTable($tablenr);

@@ -50,8 +50,6 @@ function toggleField($array, $table, $row){
 <?php
 $persons = $_SESSION['persons'];
 $attributes = getAttributesInArray();
-//foreach ($attributes as $val)
-//    echo $val."<br>";
 include '../php/displayAttributesTableBIG.php';
 ?>
 
