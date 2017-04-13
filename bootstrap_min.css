@@ -33,3 +33,7 @@ progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[ty
 h2 {
     text-align: center;
 }
+
+#firsttd {
+    visibility: hidden;
+}

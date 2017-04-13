@@ -48,6 +48,8 @@ function toggleField($array, $table, $row){
 <h2>Grid - Teil II</h2>
 
 <?php
+
+
 $persons = $_SESSION['persons'];
 $attributes = getAttributesInArray();
 include '../php/displayAttributesTableBIG.php';

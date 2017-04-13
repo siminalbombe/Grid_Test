@@ -39,7 +39,7 @@ function displayRowInTable($tablenr,$row)
 function displayFieldInTable($tablenr, $row, $index)
 {
     $name = $tablenr."_".$row."_".$index;
-    echo "<td><input type=\"text\" name=\"$name\" required></td>";
+    echo "<td><input type=\"text\" name=\"$name\" ></td>";
 }
 
 ?>

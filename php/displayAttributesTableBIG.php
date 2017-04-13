@@ -7,51 +7,51 @@
  */
 
 session_start();
-//display table for attributes
-function displayTableForAttributes($array){
-    $tablemax = 3;
-    for ($i=0; $i<=$tablemax; $i++){
-        $array = displayAllData($array);
+
+function delete_ID_GKEY_NAME($persons){
+    for ($i=0; $i<=2;$i++){
+        unset($persons[$i]);
     }
-    return $array;
-}
-function displayAllData($array){
-   $row = 2;
-   for ($i=0; $i<=$row; $i++){
-       echo "<tr>";
-       echo "<td>".array_shift($array)."</td><td>".array_shift($array)."</td>";
-       echo "</tr>";
-   }
-   echo "</tr>";
-   return $array;
+    return $persons;
 }
 
-function displayWithout_Name_ID_GKEY($var, $count){
-    if ($count <= 2){
-        return;
+function displayFirstRow($persons){
+    echo "<tr>";
+    echo "<td colspan=2 id=\"firsttd\"></td>";
+    $count = 0;
+    foreach ($persons as $item) {
+        allTypesInFirstRow($item);
+        $count++;
+        if ($count>=5){
+            echo "</tr>";
+            $persons = deleteFirstElements($persons, $count-1);
+            return $persons;
+        }
     }
-    if ($var==""){
-        return;
+    echo "</tr>";
+
+}
+
+function deleteFirstElements ($persons, $number){
+    for ($i=0; $i<=$number; $i++){
+        array_shift($persons);
     }
-    echo $var."<br>";
+    return $persons;
 }
 
-function displayTypes(){
-
+function allTypesInFirstRow($type){
+    echo "<td>".$type."</td>";
 }
 
-echo "<table style=\"border: #ddd\">";
-echo "<td>fdshusbhsfd</td>";
-echo "</table>";
+function displayAttributes(){
+
+}
 $tempAttributes = $_SESSION['attributes'];
 $tempPersons = $_SESSION['persons'];
-$count = 0;
-foreach ($tempPersons as $val){
-    displayWithout_Name_ID_GKEY($val, $count);
-    $count++;
-}
-
+$tempPersons= delete_ID_GKEY_NAME($tempPersons);
 
 echo "<table>";
-$tempAttributes = displayTableForAttributes($tempAttributes);
+displayFirstRow($tempPersons);
+
 echo "</table>";
+
