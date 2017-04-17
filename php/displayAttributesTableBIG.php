@@ -59,7 +59,7 @@ function displayAttributeItem($attributes){
 
 function displayInputs(){
     for ($i=0; $i<=4; $i++){
-        echo "<td>";
+        echo "<td class='checkboxBig'>";
         echo "<input type=\"checkbox\">";
         echo "</td>";
     }
@@ -77,7 +77,7 @@ $tempPersons = $_SESSION['persons'];
 $tempPersons= delete_ID_GKEY_NAME($tempPersons);
 
 
-echo "<form action='../view/login.php' method='get'><table>";
+echo "<form><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
 echo "</table></form>";

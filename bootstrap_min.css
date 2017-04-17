@@ -37,3 +37,7 @@ h2 {
 #firsttd {
     visibility: hidden;
 }
+
+.checkboxBig {
+    text-align: center;
+}
