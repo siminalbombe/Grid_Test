@@ -17,7 +17,7 @@ function delete_ID_GKEY_NAME($persons){
 
 function displayFirstRow($persons){
     echo "<tr>";
-    echo "<td colspan=2 id=\"firsttd\"></td>";
+    echo "<td colspan=2 id=\"firsttd\">test</td>";
     $count = 0;
     foreach ($persons as $item) {
         allTypesInFirstRow($item);
@@ -29,7 +29,6 @@ function displayFirstRow($persons){
         }
     }
     echo "</tr>";
-
 }
 
 function deleteFirstElements ($persons, $number){
@@ -43,15 +42,42 @@ function allTypesInFirstRow($type){
     echo "<td>".$type."</td>";
 }
 
-function displayAttributes(){
-
+function displayTableForInput($attributes){
+    for ($i=0; $i<=11; $i++){
+        echo "<tr>";
+        $attributes = displayAttributeItem($attributes);
+        displayInputs();
+        echo "</tr>";
+    }
 }
+
+function displayAttributeItem($attributes){
+    echo "<td>".array_shift($attributes)."</td>";
+    echo "<td>".array_shift($attributes)."</td>";
+    return $attributes;
+}
+
+function displayInputs(){
+    for ($i=0; $i<=4; $i++){
+        echo "<td>";
+        echo "<input type=\"checkbox\">";
+        echo "</td>";
+    }
+}
+
+//function breaksInAttributes($attributes){
+//    for ($i=0; $i<=(sizeof($attributes-1)); $i++){
+//        current($attributes) = wordwrap();
+//    }
+//}
+
 $tempAttributes = $_SESSION['attributes'];
+
 $tempPersons = $_SESSION['persons'];
 $tempPersons= delete_ID_GKEY_NAME($tempPersons);
 
-echo "<table>";
-displayFirstRow($tempPersons);
 
-echo "</table>";
-
+echo "<form action='../view/login.php' method='get'><table>";
+$tempPersons = displayFirstRow($tempPersons);
+displayTableForInput($tempAttributes);
+echo "</table></form>";
