@@ -50,6 +50,7 @@ function toggleField($array, $table, $row){
 <?php
 $attributes = getAttributesInArray();
 include '../php/displayAttributesTableBIG.php';
+include '../php/analyse.php';
 ?>
 
 </body>

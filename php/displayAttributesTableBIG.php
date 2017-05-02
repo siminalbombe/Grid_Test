@@ -17,7 +17,7 @@ function delete_ID_GKEY_NAME($persons){
 
 function displayFirstRow($persons){
     echo "<tr>";
-    echo "<td colspan=2 id=\"firsttd\">test</td>";
+    echo "<td colspan=2 id=\"firsttd\"></td>";
     $count = 0;
     foreach ($persons as $item) {
         allTypesInFirstRow($item);
