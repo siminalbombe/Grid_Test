@@ -46,7 +46,7 @@ function displayTableForInput($attributes){
     for ($i=0; $i<=11; $i++){
         echo "<tr>";
         $attributes = displayAttributeItem($attributes);
-        displayInputs();
+        displayInputs($i);
         echo "</tr>";
     }
 }
@@ -57,19 +57,13 @@ function displayAttributeItem($attributes){
     return $attributes;
 }
 
-function displayInputs(){
+function displayInputs($row){
     for ($i=0; $i<=4; $i++){
         echo "<td class='checkboxBig'>";
-        echo "<input type=\"checkbox\">";
+        echo "<input type=\"checkbox\" name=\"".$row.$i."\">";
         echo "</td>";
     }
 }
-
-//function breaksInAttributes($attributes){
-//    for ($i=0; $i<=(sizeof($attributes-1)); $i++){
-//        current($attributes) = wordwrap();
-//    }
-//}
 
 $tempAttributes = $_SESSION['attributes'];
 
