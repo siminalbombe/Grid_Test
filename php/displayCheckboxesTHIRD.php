@@ -76,4 +76,5 @@ $tempPersons= delete_ID_GKEY_NAME($tempPersons);
 echo "<form action=\"../view/bigTable_15_20.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
+echo "<input type='submit' value='submit'>";
 echo "</table></form>";

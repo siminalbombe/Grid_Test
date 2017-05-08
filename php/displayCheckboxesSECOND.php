@@ -72,8 +72,10 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 $tempPersons= delete_ID_GKEY_NAME($tempPersons);
+print_r($tempPersons);
 
 echo "<form action=\"../view/bigTable_10_15.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
+echo "<input type='submit' value='submit'>";
 echo "</table></form>";

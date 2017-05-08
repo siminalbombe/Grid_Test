@@ -7,7 +7,7 @@ function getAttributesInArray(){
     $_SESSION['attributes'] = $temp;
     return $temp;
 }
-//iterate through all tables
+//iterate through all tables of attributes
 function iterateThroughTables(){
     $array = array();
     for ($table=0; $table<=3; $table++){
@@ -15,7 +15,7 @@ function iterateThroughTables(){
     }
     return $array;
 }
-//iterate through all rows
+//iterate through all rows of attribute table
 function iterateThroughRows($array, $table){
     for ($row=0; $row<=2; $row++){
         $array = toggleField($array, $table, $row);
@@ -50,7 +50,6 @@ function toggleField($array, $table, $row){
 <?php
 $attributes = getAttributesInArray();
 include '../php/displayCheckboxesFIRST.php';
-include '../php/analyse.php';
 ?>
 
 </body>
