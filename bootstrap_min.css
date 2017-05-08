@@ -34,8 +34,12 @@ h2 {
     text-align: center;
 }
 
-#firsttd {
-    visibility: hidden;
+.firsttd {
+    /*visibility: hidden;*/
+}
+
+.persons {
+
 }
 
 .checkboxBig {
