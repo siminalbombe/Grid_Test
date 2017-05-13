@@ -2,11 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: simon.hofmann
- * Date: 21/03/2017
- * Time: 00:52
+ * Date: 13/05/2017
+ * Time: 21:52
  */
-include '..\db\connect_pdo.php';
+
+session_start();
+
+include '..\php\loginscript.php';
+
+//if(!isset($_SESSION['username'])) {
+//    die('Bitte zuerst <a href="login.php">einloggen</a>');
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,18 +29,6 @@ include '..\db\connect_pdo.php';
 </head>
 
 <body>
-
-<h2>Login Page</h2>
-
-<div align="center">
-<form action="check.php" method="get">
-    Username<br>
-    <input type="text" name="username"><br>
-    Password<br>
-    <input type="password" name="password"><br>
-    <input type="submit" value="Login" class="button">
-</form>
-</div>
 
 </body>
 </html>
