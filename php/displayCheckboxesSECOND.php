@@ -9,36 +9,24 @@
 session_start();
 $_SESSION['sites'] = array("bigTable_5_10.php", "bigTable_10_15.php", "bigTable_15_20.php");
 
-function delete_ID_GKEY_NAME($persons){
-    for ($i=0; $i<=2;$i++){
-        unset($persons[$i]);
-    }
-    return $persons;
-}
 
 function displayFirstRow($persons){
     echo "<tr>";
     echo "<td class=\"firsttd\">Beschreibung</td>";
     echo "<td class=\"firsttd\">Gegenteil</td>";
 
-    $count = 0;
+    $counter = 0;
     foreach ($persons as $item) {
-        allTypesInFirstRow($item);
-        $count++;
-        if ($count>=5){
+        if ($counter>=8 && $counter<=12){
+            allTypesInFirstRow($item);
+        }
+        if ($counter>=13){
             echo "</tr>";
-            $persons = deleteFirstElements($persons, $count-1);
+            $_SESSION['counter'] = $counter;
             return $persons;
         }
+        $counter++;
     }
-    echo "</tr>";
-}
-
-function deleteFirstElements ($persons, $number){
-    for ($i=0; $i<=$number; $i++){
-        array_shift($persons);
-    }
-    return $persons;
 }
 
 function allTypesInFirstRow($type){
@@ -69,13 +57,10 @@ function displayInputs($row){
 }
 
 $tempAttributes = $_SESSION['attributes'];
-
 $tempPersons = $_SESSION['persons'];
-$tempPersons= delete_ID_GKEY_NAME($tempPersons);
-print_r($tempPersons);
 
 echo "<form action=\"../view/bigTable_10_15.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
-echo "<input type='submit' value='submit'>";
-echo "</table></form>";
+echo "</table><input type='submit' value='submit' class='button'>";
+echo "</form>";

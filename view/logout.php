@@ -3,9 +3,10 @@
  * Created by PhpStorm.
  * User: simon.hofmann
  * Date: 14/05/2017
- * Time: 01:54
+ * Time: 09:36
  */
-include '../php/checkforlogin.php';
+
+
 ?>
 
 
@@ -17,22 +18,23 @@ include '../php/checkforlogin.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>GRID-Config</title>
+    <title>GRID-Logout</title>
     <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>
+<h2>Logout</h2>
 <div align="center">
-    <form>
-        <input class="button" value="Umfrage erstellen" type="submit"><br>
-    </form>
-    <form>
-        <input class="button" value="Umfrage analysieren" type="submit">
 
-    </form>
-    <form action="logout.php">
-        <input class="button" value="Logout" type="submit">
-    </form>
+    <?php
+
+    session_start();
+    session_destroy();
+
+    echo "<p>Logout erfolgreich</p>";
+    ?>
+    <a href="../index.php">Weiter zur Startseite</a>
 </div>
+
 </body>
 </html>

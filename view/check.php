@@ -9,8 +9,6 @@
 session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 
-//if(!isset($_SESSION['username'])) {
-//    die('Bitte zuerst <a href="login.php">einloggen</a>');
 
 ?>
 
