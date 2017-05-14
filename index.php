@@ -13,6 +13,7 @@
 
 <body>
 <h2>Grid-Start Page</h2>
+<br>
     <div align="center">
         <form action="view/groupkey.php">
             <input type="submit" value="Start survey" class="button">

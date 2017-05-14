@@ -2,16 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: simon.hofmann
- * Date: 13/05/2017
- * Time: 21:52
+ * Date: 14/05/2017
+ * Time: 01:54
  */
-
 session_start();
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
+if(!isset($_SESSION['user'])) {
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
+}
 
-//if(!isset($_SESSION['username'])) {
-//    die('Bitte zuerst <a href="login.php">einloggen</a>');
-
+//Abfrage der Nutzer ID vom Login
+$username = $_SESSION['user'];
 ?>
 
 
@@ -23,14 +23,16 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>GRID-Login</title>
+    <title>GRID-Config</title>
     <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>
-<?php
-include '..\php\loginscript.php';
-
-?>
+<div align="center">
+    <form>
+        <input class="button" value="Umfrage erstellen"><br>
+        <input class="button" value="Umfrage analysieren">
+    </form>
+</div>
 </body>
 </html>

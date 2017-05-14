@@ -7,22 +7,27 @@
  */
 session_start();
 
-$username = $_GET['username'];
-$password = $_GET['password'];
-
-$statement = $pdo->prepare("SELECT username FROM grid.Admin WHERE username = :username");
-echo "TEST";
-/*
-$result = $statement->execute(array('username' => $username));
-$user = $statement->fetch();
-
-//Überprüfung des Passworts
-if (password_verify($password, $user['login'])) {
-    $_SESSION['userid'] = $user['id'];
-    die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
-} else {
-    $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+$username = (string)$_GET['username'];
+$password = (string)$_GET['password'];
+$dbpassword = null;
+/*echo strpos($username,'drop')."<br>";
+echo strpos($username,'delete')."<br>";
+echo strpos($username,'update')."<br>";
+if ((strpos($username,'drop') && strpos($username,'delete') && strpos($username,'update')) == false){
+    echo "Invalid input<br>Please try again!";
+    echo "<form action=\"login.php\"><input type='submit' value='Go back'></form>";
 }
+else {*/
+$select = "SELECT username, login FROM grid.Admin where username='".$username."'";
 
-
-*/
+$result = $conn->query($select);
+while ($row = $result->fetch_assoc()) {
+    $dbpassword = $row['login'];
+}
+if (password_verify($password, $dbpassword) == true){
+    $_SESSION['user'] = $username;
+    die('Login erfolgreich.<br> Weiter zu <a href="config.php">Config.php</a>');
+}
+else{
+    echo "INCORRECT";
+}

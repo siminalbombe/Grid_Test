@@ -1,11 +1,11 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: simon.hofmann
  * Date: 21/03/2017
  * Time: 00:52
  */
-include '..\db\connect_pdo.php';
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -28,7 +28,7 @@ include '..\db\connect_pdo.php';
     Username<br>
     <input type="text" name="username"><br>
     Password<br>
-    <input type="password" name="password"><br>
+    <input type="password" name="password"><br><br>
     <input type="submit" value="Login" class="button">
 </form>
 </div>
