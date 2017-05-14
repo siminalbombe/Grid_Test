@@ -15,13 +15,12 @@
 <h2>Grid-Start Page</h2>
 <br>
     <div align="center">
-        <form action="view/groupkey.php">
+        <form action="view/groupkey.html">
             <input type="submit" value="Start survey" class="button">
         </form>
         <form action="view/login.php">
             <input type="submit" value="Log In" class="button""><br>
         </form>
-
     </div>
 </body>
 </html>

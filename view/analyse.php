@@ -2,14 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: simon.hofmann
- * Date: 13/05/2017
- * Time: 21:52
+ * Date: 14/05/2017
+ * Time: 18:38
  */
 
 session_start();
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="de">
@@ -19,14 +17,22 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>GRID-Login</title>
+    <title>GRID-Analyse</title>
     <link rel="stylesheet" href="../bootstrap_min.css">
 </head>
 
 <body>
-<?php
-include '..\php\loginscript.php';
-$conn->close();
-?>
+<h2>Analyse</h2>
+<div align="center">
+    <form>
+        Bitte eine Probandengruppe auswählen:<br>
+        <select>
+            <?php
+            include '../php/getAllGroupsForSelect.php';
+            ?>
+        </select>
+        <input type="submit" value="submit">
+    </form>
+</div>
 </body>
 </html>

@@ -10,8 +10,6 @@ session_start();
 $_SESSION['Konkordanz'] = array();
 $_SESSION['Diskordanz'] = array();
 
-$_SESSION['sites'] = array("bigTable_5_10.php", "bigTable_10_15.php", "bigTable_15_20.php");
-
 function displayFirstRow($persons){
     echo "<tr>";
     echo "<td class=\"firsttd\">Beschreibung</td>";
@@ -31,13 +29,6 @@ function displayFirstRow($persons){
 
         $counter++;
     }
-}
-
-function deleteFirstElements ($persons, $number){
-    for ($i=0; $i<=$number; $i++){
-        array_shift($persons);
-    }
-    return $persons;
 }
 
 function allTypesInFirstRow($type){

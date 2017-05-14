@@ -20,7 +20,7 @@ function iterateThroughForm ($startRow, $endRow){
         for ($column=0; $column<5; $column++){
             $cell = $row.$column;
             if (isset ($_GET[$cell])) {
-                $_SESSION['Konkordanz'] =
+                $_SESSION['Konkordanz'] = ;
             }
             else{
 

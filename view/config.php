@@ -26,9 +26,8 @@ include '../php/checkforlogin.php';
     <form>
         <input class="button" value="Umfrage erstellen" type="submit"><br>
     </form>
-    <form>
+    <form action="analyse.php">
         <input class="button" value="Umfrage analysieren" type="submit">
-
     </form>
     <form action="logout.php">
         <input class="button" value="Logout" type="submit">
