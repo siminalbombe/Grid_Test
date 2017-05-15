@@ -10,14 +10,7 @@ session_start();
 $username = (string)$_GET['username'];
 $password = (string)$_GET['password'];
 $dbpassword = null;
-/*echo strpos($username,'drop')."<br>";
-echo strpos($username,'delete')."<br>";
-echo strpos($username,'update')."<br>";
-if ((strpos($username,'drop') && strpos($username,'delete') && strpos($username,'update')) == false){
-    echo "Invalid input<br>Please try again!";
-    echo "<form action=\"login.php\"><input type='submit' value='Go back'></form>";
-}
-else {*/
+
 $select = "SELECT username, login FROM grid.Admin where username='".$username."'";
 
 $result = $conn->query($select);

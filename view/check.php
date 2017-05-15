@@ -7,7 +7,7 @@
  */
 
 session_start();
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
+include '..\db\connect.php';
 ?>
 
 
@@ -26,7 +26,6 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 <body>
 <?php
 include '..\php\loginscript.php';
-$conn->close();
 ?>
 </body>
 </html>
