@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
-
 ?>
 
 

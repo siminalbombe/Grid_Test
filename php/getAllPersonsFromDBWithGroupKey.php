@@ -40,6 +40,8 @@ function removeNotExistentPersons($array){
 }
 
 $gkey = $_GET['gkey'];
+$_SESSION['groupkey'] = $gkey;
+
 echo "Group Key: ";
 if ($gkey=="")
     echo "no Group Key entered";

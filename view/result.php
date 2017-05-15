@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -14,8 +18,9 @@
 <h2>Grid - Result</h2>
 <p>Result:</p>
 <?php
+
 include '../php/calcResults.php';
-include '';
+include '../db/uploadResult.php';
 
 ?>
 
