@@ -16,12 +16,10 @@ session_start();
 
 <body>
 <h2>Grid - Result</h2>
-<p>Result:</p>
-<?php
 
+<?php
 include '../php/calcResults.php';
 include '../db/uploadResult.php';
-
 ?>
 
 </body>
