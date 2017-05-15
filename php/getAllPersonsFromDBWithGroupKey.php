@@ -39,34 +39,42 @@ function removeNotExistentPersons($array){
     return $array;
 }
 
-$gkey = $_GET['gkey'];
+$gkey = strtolower($_GET['gkey']);
 $_SESSION['groupkey'] = $gkey;
 
-echo "Group Key: ";
-if ($gkey=="")
-    echo "no Group Key entered";
-echo $gkey."<br>";
 
+if ($gkey=="" || (strpos($gkey,'drop')!==false) || (strpos($gkey,'delete')!==false) || (strpos($gkey,'update')!==false) || (strpos($gkey,'create')!==false) || (strpos($gkey,'insert')!==false)){
+    $_SESSION['gkeyfalse'] = true;
+}
+else{
+    $_SESSION['gkeyfalse'] = false;
 
-$select = "SELECT * FROM grid.group where groupkey ='".$gkey."'";
-echo "<br>";
-$persons = array();
-$indexOfPersons = 0;
-$result = $conn->query($select);
-while ($row = $result->fetch_assoc()) {
-    foreach ($row as $val){
-        $persons[$indexOfPersons] = $val;
-        $indexOfPersons++;
+    $select = "SELECT * FROM grid.group where groupkey ='".$gkey."'";
+    $persons = array();
+    $indexOfPersons = 0;
+    $result = $conn->query($select);
+    while ($row = $result->fetch_assoc()) {
+        foreach ($row as $val){
+            $persons[$indexOfPersons] = $val;
+            $indexOfPersons++;
+        }
     }
-}
 
-$_SESSION['persons'] = $persons;
-$_SESSION['numberofpersons'] = countPersons($persons);
-echo "Anzahl Typen: <b>".$_SESSION['numberofpersons']."</b>";
-echo "<table>";
-$indexOfPersons=0;
-foreach ($persons as $val){
-    printArray($val, $indexOfPersons);
-    $indexOfPersons++;
+    $_SESSION['persons'] = $persons;
+    $_SESSION['numberofpersons'] = countPersons($persons);
+    if (countPersons($persons)== 0){
+        $_SESSION['gkeyfalse'] = true;
+    }
+    else{
+        echo "Group Key: <b>".$_GET['gkey']."</b><br>";
+        echo "Anzahl Typen: <b>".$_SESSION['numberofpersons']."</b><br><br>";
+        echo "<table>";
+        $indexOfPersons=0;
+        foreach ($persons as $val){
+            printArray($val, $indexOfPersons);
+            $indexOfPersons++;
+        }
+        echo "</table>";
+    }
+
 }
-echo "</table>";

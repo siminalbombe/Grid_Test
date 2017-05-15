@@ -58,6 +58,7 @@ function displayFieldInTable($tablenr, $row, $index)
 
 <body>
 <h2>Grid-Attributes</h2>
+<div class="div">
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
 <form action="bigTable_0_5.php" method="get">
@@ -85,7 +86,7 @@ function displayFieldInTable($tablenr, $row, $index)
     ?>
     <input type="submit" value="use this attributes" class="button">
 </form>
-
+</div>
 
 </body>
 </html>
