@@ -33,6 +33,14 @@ session_start();
         </select>
         <input type="submit" value="submit">
     </form>
+    <table border="1">
+        <tr><td hidden></td><td>Varianz</td><td>Mittelwert</td></tr>
+
+        <?php
+
+        ?>
+    </table>
+
 </div>
 </body>
 </html>

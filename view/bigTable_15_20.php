@@ -21,7 +21,7 @@
  * Time: 11:10
  */
 
-
+include '../php/calcResults.php';
 include '../php/displayCheckboxesFOUR.php';
 ?>
 </body>

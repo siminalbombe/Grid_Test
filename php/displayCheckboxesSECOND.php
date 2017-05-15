@@ -7,8 +7,6 @@
  */
 
 session_start();
-$_SESSION['sites'] = array("bigTable_5_10.php", "bigTable_10_15.php", "bigTable_15_20.php");
-
 
 function displayFirstRow($persons){
     echo "<tr>";

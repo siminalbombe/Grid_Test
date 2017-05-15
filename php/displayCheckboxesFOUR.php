@@ -19,17 +19,19 @@ function displayFirstRow($persons){
         if ($counter>=18 && $counter<=22){
             allTypesInFirstRow($item);
         }
+
         if ($counter>=22){
             echo "</tr>";
             $_SESSION['counter'] = $counter;
             return $persons;
         }
+
         $counter++;
     }
 }
 
 function allTypesInFirstRow($type){
-    echo "<td class=\"persons\">".$type."</td>";
+    echo "<td>".$type."</td>";
 }
 
 function displayTableForInput($attributes){
@@ -59,7 +61,7 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action=\"../view/RESULT.php\"><table border='1'>";
+echo "<form action=\"../view/result.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
 echo "</table><input type='submit' value='submit' class='button'>";

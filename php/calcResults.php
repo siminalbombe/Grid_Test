@@ -7,27 +7,59 @@
  */
 
 session_start();
+
 function calcKonkordanz (){
-    iterateThroughForm(0,5);
+    $array = array();
+    for ($column=0; $column<5; $column++){
+        $temp = iterateThroughForm($column,0,2, true);
+        $temp += iterateThroughForm($column,3,5, false);
+        $array[] = $temp;
+    }
+    return $array;
 }
 
 function calcDiskordanz() {
-    iterateThroughForm(6,11);
+    $array = array();
+    for ($column=0; $column<5; $column++){
+        $temp = iterateThroughForm($column,6,8, true);
+        $temp += iterateThroughForm($column,9,11, false);
+        $array[] = $temp;
+    }
+    return $array;
 }
 
-function iterateThroughForm ($startRow, $endRow){
+function iterateThroughForm ($column ,$startRow, $endRow, $bool){
+    $temp = 0;
     for ($row=$startRow; $row<=$endRow; $row++){
-        for ($column=0; $column<5; $column++){
-            $cell = $row.$column;
-            if (isset ($_GET[$cell])) {
-                $_SESSION['Konkordanz'] = ;
-            }
-            else{
-
-            }
+        $cell = $row.$column;
+        if ($bool && $_GET[$cell]) {
+            $temp++;
+        }
+        if (!$bool && !$_GET[$cell]){
+            $temp++;
         }
     }
+    return $temp;
+
 }
 
-calcKonkordanz();
-calcDiskordanz();
+$temp1 = calcKonkordanz();
+$temp2 = calcDiskordanz();
+
+$tempKonkordanz = $_SESSION['Konkordanz'];
+$tempDiskordanz = $_SESSION['Diskordanz'];
+
+foreach ($temp1 as $item){
+    $tempKonkordanz[] = $item;
+}
+foreach ($temp1 as $item){
+    $tempDiskordanz[] = $item;
+}
+
+$_SESSION['Konkordanz'] = $tempKonkordanz;
+$_SESSION['Diskordanz'] = $tempDiskordanz;
+
+echo "Konkordanz: ";
+print_r($_SESSION['Konkordanz']);
+echo "<br>Diskordanz: ";
+print_r($_SESSION['Diskordanz']);

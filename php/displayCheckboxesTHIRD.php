@@ -16,10 +16,13 @@ function displayFirstRow($persons){
 
     $counter = 0;
     foreach ($persons as $item) {
-        if ($counter>=13 && $counter<=17){
+        if ($item =="" || $item==null){
+            echo "<td hidden></td>";
+        }
+        else if ($counter>=13 && $counter<=17){
             allTypesInFirstRow($item);
         }
-        if ($counter>=18){
+        else if ($counter>=18){
             echo "</tr>";
             $_SESSION['counter'] = $counter;
             return $persons;
@@ -27,7 +30,6 @@ function displayFirstRow($persons){
         $counter++;
     }
 }
-
 
 function allTypesInFirstRow($type){
     echo "<td class=\"persons\">".$type."</td>";

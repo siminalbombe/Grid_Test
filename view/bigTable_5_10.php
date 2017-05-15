@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -12,16 +16,11 @@
 
 <body>
 <h2>Grid - Teil III</h2>
+
 <?php
-/**
- * Created by PhpStorm.
- * User: simon.hofmann
- * Date: 08/05/2017
- * Time: 11:10
- */
-
-
+include '../php/calcResults.php';
 include '../php/displayCheckboxesSECOND.php';
 ?>
+
 </body>
 </html>
