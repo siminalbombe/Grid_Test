@@ -23,7 +23,8 @@ session_start();
 <h2>Konfiguration</h2><br>
 <div align="center">
     <form action="">
-
+        Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:
+        <?php include '../php/createNewGroup.php';?>
         <input class="button" value="Diese Umfrage erstellen" type="submit"><br>
     </form>
 </div>
