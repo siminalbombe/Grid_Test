@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
+include '../db/connect.php';
 ?>
 
 
@@ -41,7 +41,7 @@ include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\db\connect.php';
 <div class="div">
     <form action="attributes.php" method="get" >
         <?php
-        include 'C:\Users\Simon.hofmann\PhpstormProjects\untitled\php\getAllPersonsFromDBWithGroupKey.php';
+        include '../php/getAllPersonsFromDBWithGroupKey.php';
         ?>
         <input type="submit" class="button"
             <?php
