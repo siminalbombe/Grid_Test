@@ -17,8 +17,6 @@ function getEverySecond($all, $stripcount){
         }
         $counter++;
     }
-    echo "<br>ATTRIBUTES (STRIPPED): ";
-    print_r($necessaryAttributes);
     echo "<br>";
     return $necessaryAttributes;
 }
@@ -29,14 +27,10 @@ function stripArray($all, $stripcount)
     for ($i = 0; $i <= $stripcount - 1; $i++) {
         array_shift($all);
     }
-    echo "<br>ATTRIBUTES (STRIPPED-FIRST): ";
-    print_r($all);
     //Delete last unnecessary attributes
     while (count($all) > 6){
         array_pop($all);
     }
-    echo "<br>ATTRIBUTES (STRIPPED-LAST): ";
-    print_r($all);
     return $all;
 }
 
@@ -47,14 +41,18 @@ function concatArray($temp, $array){
     return $array;
 }
 
+function displayAttributesInDiagram($attributes){
+    foreach ($attributes as $item){
+        echo "<li>".$item."</li>";
+
+    }
+}
+
 $attributes = $_SESSION['attributes'];
 $akzeptieren = array();
 $aufsuchen = array();
 $meiden = array();
 $kritisieren = array();
-
-echo "ATTRIBUTES: ";
-print_r($attributes);
 
 //AKZEPTIEREN
 $akzeptieren = getEverySecond($attributes,0);
@@ -90,23 +88,21 @@ echo "<br>AUFSUCHEN: ";
 print_r($aufsuchen);
 ?>
 
+
+
 <div align="center">
 <table>
     <tbody>
     <tr>
         <td><b>Kritisieren</b>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <?php displayAttributesInDiagram($kritisieren);?>
             </ul>
         </td>
         <td></td>
         <td><b>Akzeptieren</b>
             <ul>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
+                <?php displayAttributesInDiagram($akzeptieren);?>
             </ul>
         </td>
     </tr>
@@ -118,17 +114,13 @@ print_r($aufsuchen);
     <tr>
         <td>
             <ul><b>Meiden</b>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
+                <?php displayAttributesInDiagram($meiden);?>
             </ul>
         </td>
         <td></td>
         <td>
             <ul><b>Aufsuchen</b>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
+                <?php displayAttributesInDiagram($aufsuchen);?>
             </ul>
         </td>
     </tr>
