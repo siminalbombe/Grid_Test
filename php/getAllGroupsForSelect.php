@@ -8,12 +8,10 @@
 session_start();
 
 include '../db/connect.php';
-$select = "SELECT name FROM grid.group";
-echo "TEST";
+
+$persontypes = array();
+$select = "SELECT ID,name FROM grid.group";
 $result = $conn->query($select);
-echo "TEST";
 while ($row = $result->fetch_assoc()) {
-    foreach ($row as $val) {
-        echo "<option>".$val."</option>";
-    }
+    echo "<option name=\"".$row['name']."\">".$row['name']." (ID ".$row['ID'].")</option>";
 }

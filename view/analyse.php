@@ -7,6 +7,7 @@
  */
 
 session_start();
+include "../php/checkforlogin.php";
 ?>
 
 <!DOCTYPE html>
@@ -23,25 +24,31 @@ session_start();
 
 <body>
 <h2>Analyse</h2>
-<div class="div">
+<div align="center">
     <form>
         Bitte eine Probandengruppe auswählen:<br>
-        <select>
+        <select name="groupname">
             <?php
             include '../php/getAllGroupsForSelect.php';
             ?>
         </select>
-        <input type="submit" value="submit">
+        <br>
+        <br>
+        <input type="submit" value="submit" class="button">
     </form>
+    <br>
+
     <table border="1">
-        <tr><td hidden></td><td>Varianz</td><td>Mittelwert</td></tr>
+        <th style="visibility: hidden"></th> <th colspan="2" style="text-align: center">Mittelwert</th>
+        <tr><td>Personentypen</td><td>Konkordanz</td><td>Diskordanz</td></tr>
 
         <?php
-
+            include '../php/calcStatistics.php';
         ?>
     </table>
-    <form>
-        <input class="button" value="Zurück">
+    <br>
+    <form action="config.php">
+        <input class="button" value="Zurück" type="submit">
     </form>
 </div>
 </body>

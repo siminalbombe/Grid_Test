@@ -28,14 +28,14 @@ function calcDiskordanz() {
     return $array;
 }
 
-function iterateThroughForm ($column ,$startRow, $endRow, $bool){
+function iterateThroughForm ($column ,$startRow, $endRow, $checked){
     $temp = 0;
     for ($row=$startRow; $row<=$endRow; $row++){
         $cell = $row.$column;
-        if ($bool && $_GET[$cell]) {
+        if ($checked && $_GET[$cell]) {
             $temp++;
         }
-        if (!$bool && !$_GET[$cell]){
+        if (!$checked && !$_GET[$cell]){
             $temp++;
         }
     }
@@ -52,7 +52,7 @@ $tempDiskordanz = $_SESSION['Diskordanz'];
 foreach ($temp1 as $item){
     $tempKonkordanz[] = $item;
 }
-foreach ($temp1 as $item){
+foreach ($temp2 as $item){
     $tempDiskordanz[] = $item;
 }
 
