@@ -69,3 +69,7 @@ echo "</table>";
 echo "<input type='submit' value='submit' class='button'>";
 echo "</form>";
 $_SESSION['persons'] = $tempPersons;
+
+
+echo "<br>";
+print_r($_SESSION['attributes']);

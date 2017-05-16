@@ -20,7 +20,12 @@ session_start();
 <?php
 include '../php/calcResults.php';
 include '../db/uploadResult.php';
+include '../php/diagram.php';
+
 ?>
+<br>
+
+
 
 </body>
 </html>

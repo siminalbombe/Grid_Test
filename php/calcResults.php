@@ -63,3 +63,4 @@ echo "Konkordanz: ";
 print_r($_SESSION['Konkordanz']);
 echo "<br>Diskordanz: ";
 print_r($_SESSION['Diskordanz']);
+echo "<br>";

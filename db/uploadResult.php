@@ -39,7 +39,6 @@ function getValues($konkordanz, $diskordanz){
 session_start();
 include 'connect.php';
 
-echo "<br>Script Results:<br>";
 echo "Group Key: ".$_SESSION['groupkey']."<br>";
 
 $stmt = "SELECT ID FROM grid.group where groupkey='".$_SESSION['groupkey']."'";
@@ -52,7 +51,7 @@ while ($row = $result->fetch_assoc()) {
     }
 }
 
-echo "ID: ".$id."<br>";
+echo "Group-ID: ".$id."<br>";
 
 $konkordanz = $_SESSION['Konkordanz'];
 $diskordanz = $_SESSION['Diskordanz'];
