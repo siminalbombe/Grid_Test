@@ -23,11 +23,6 @@ function getEverySecond($all, $stripcount){
     return $necessaryAttributes;
 }
 
-/**
- * @param $all
- * @param $stripcount
- * @return mixed
- */
 function stripArray($all, $stripcount)
 {
     //Delete first unnecessary attributes
@@ -36,14 +31,20 @@ function stripArray($all, $stripcount)
     }
     echo "<br>ATTRIBUTES (STRIPPED-FIRST): ";
     print_r($all);
-    $maxarray = count($all);
     //Delete last unnecessary attributes
-    for ($i = $maxarray; $i >= 2; $i--) {
+    while (count($all) > 6){
         array_pop($all);
     }
     echo "<br>ATTRIBUTES (STRIPPED-LAST): ";
     print_r($all);
     return $all;
+}
+
+function concatArray($temp, $array){
+    foreach ($temp as $item){
+        $array[] = $item;
+    }
+    return $array;
 }
 
 $attributes = $_SESSION['attributes'];
@@ -55,16 +56,38 @@ $kritisieren = array();
 echo "ATTRIBUTES: ";
 print_r($attributes);
 
+//AKZEPTIEREN
 $akzeptieren = getEverySecond($attributes,0);
-$temp = getEverySecond($attributes,9);
-foreach ($temp as $item){
-    $akzeptieren[] = $item;
-}
+$temp = getEverySecond($attributes,7);
+$akzeptieren = concatArray($temp, $akzeptieren);
+
+//KRITISIEREN
+$kritisieren = getEverySecond($attributes,12);
+$temp = getEverySecond($attributes,19);
+$kritisieren = concatArray($temp, $kritisieren);
+
+//MEIDEN
+$meiden = getEverySecond($attributes,6);
+$temp = getEverySecond($attributes,1);
+$meiden = concatArray($temp, $meiden);
+
+//AUFSUCHEN
 $aufsuchen = getEverySecond($attributes,18);
-echo "<br>AUFSUCHEN: ";
-print_r($aufsuchen);
+$temp = getEverySecond($attributes,13);
+$aufsuchen = concatArray($temp, $aufsuchen);
+
+
 echo "<b>Akzeptieren:</b> ";
 print_r($akzeptieren);
+
+echo "<b>Kritisieren:</b> ";
+print_r($kritisieren);
+
+echo "<b>Meiden:</b> ";
+print_r($meiden);
+
+echo "<br>AUFSUCHEN: ";
+print_r($aufsuchen);
 ?>
 
 <div align="center">
