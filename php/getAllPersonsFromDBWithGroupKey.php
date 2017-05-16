@@ -39,17 +39,16 @@ function removeNotExistentPersons($array){
     return $array;
 }
 
-$gkey = strtolower($_GET['gkey']);
-$_SESSION['groupkey'] = $gkey;
+$item = strtolower($_GET['gkey']);
+$_SESSION['groupkey'] = $item;
 
-
-if ($gkey=="" || (strpos($gkey,'drop')!==false) || (strpos($gkey,'delete')!==false) || (strpos($gkey,'update')!==false) || (strpos($gkey,'create')!==false) || (strpos($gkey,'insert')!==false)){
+if ($item=="" || (strpos($item,'drop')!==false) || (strpos($item,'delete')!==false) || (strpos($item,'update')!==false) || (strpos($item,'create')!==false) || (strpos($item,'insert')!==false)){
     $_SESSION['gkeyfalse'] = true;
 }
 else{
     $_SESSION['gkeyfalse'] = false;
 
-    $select = "SELECT * FROM grid.group where groupkey ='".$gkey."'";
+    $select = "SELECT * FROM grid.group where groupkey ='".$item."'";
     $persons = array();
     $indexOfPersons = 0;
     $result = $conn->query($select);

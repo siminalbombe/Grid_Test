@@ -23,7 +23,7 @@ session_start();
 
 <body>
 <h2>Analyse</h2>
-<div align="center">
+<div class="div">
     <form>
         Bitte eine Probandengruppe auswählen:<br>
         <select>
@@ -40,7 +40,9 @@ session_start();
 
         ?>
     </table>
-
+    <form>
+        <input class="button" value="Zurück">
+    </form>
 </div>
 </body>
 </html>

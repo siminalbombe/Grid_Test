@@ -7,6 +7,7 @@
  */
 session_start();
 
+$inputs = array();
 $inputs[] = $_GET['name'];
 $inputs[] = $_GET['first'];
 $inputs[] = $_GET['second'];
@@ -29,15 +30,13 @@ $inputs[] = $_GET['eigteenth'];
 $inputs[] = $_GET['nineteenth'];
 $inputs[] = $_GET['twentieth'];
 
-foreach ($inputs as strtolower($item)){
-    if ($item=="" || (strpos($gkey,'drop')!==false) || (strpos($gkey,'delete')!==false) || (strpos($gkey,'update')!==false) || (strpos($gkey,'create')!==false) || (strpos($gkey,'insert')!==false)){
-        $_SESSION['InvalidInput'] = true;
+foreach ($inputs as $item){
+    $item = strtolower($item);
+    if ((strpos($item,'drop')!==false) || (strpos($item,'delete')!==false) || (strpos($item,'update')!==false) || (strpos($item,'create')!==false) || (strpos($item,'insert')!==false)){
+        $_SESSION['invalidInput'] = true;
     }
     else
     {
-        $_SESSION['InvalidInput'] = false;
+        $_SESSION['invalidInput'] = false;
     }
 }
-
-
-

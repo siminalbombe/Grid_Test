@@ -6,6 +6,7 @@
  * Time: 13:29
  */
 session_start();
+include 'connect.php';
 function randomGroupKey($length) {
     $str = "";
     $characters = array_merge(range('A','Z'), range('a','z'), range('0','9'));
@@ -18,5 +19,20 @@ function randomGroupKey($length) {
 }
 
 $groupkey = randomGroupKey(10);
-echo $_GET['name'];
 
+
+$insert = "INSERT INTO grid.group (name, groupkey, first, second, third, fourth, fifth, sixth, seventh ,eigth, ninth, tenth,
+                eleventh, twelth, thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eigteenth, nineteenth, twentieth)
+                VALUES ('".$_GET['name']."','".$groupkey."','".$_GET['first']."','". $_GET['second']."','".$_GET['third']."','". $_GET['fourth']."','".$_GET['fifth']
+                ."','". $_GET['sixth']."','".$_GET['seventh']."','".$_GET['eigth']."','".$_GET['ninth']."','".$_GET['tenth']
+                ."','". $_GET['eleventh']."','".$_GET['twelth']."','".$_GET['thirteenth']."','".$_GET['fourteenth']."','".$_GET['fifteenth']
+                ."','". $_GET['sixteenth']."','".$_GET['seventeenth']."','".$_GET['eigteenth']."','".$_GET['nineteenth']."','".$_GET['twentieth']."')";
+
+if ($conn->query($insert) === TRUE) {
+    echo "Umfrage ".$_GET['name']." wurde erstellt.<br>";
+    echo "Umfrage-Name: ".$_GET['name']."<br>";
+    echo "Schlüssel: ".$groupkey."<br>";
+}
+else{
+    echo "SQL-Statement not possible";
+}

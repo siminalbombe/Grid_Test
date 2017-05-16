@@ -9,9 +9,9 @@
 ?>
 <table>
     <?php
-    echo "<tr><td>Name der Gruppe</td><td><input type=\"text\" name=\"name\"></td></tr><br>";
+    echo "<tr><td>Name der Gruppe</td><td><input type=\"text\" name=\"name\" required></td></tr><br>";
     echo "<tr><td>1</td>";
-    echo "<td><input type=\"text\" name=\"first\"></td></tr>";
+    echo "<td><input type=\"text\" name=\"first\" required></td></tr>";
     echo "<tr><td>2</td>";
     echo "<td><input type=\"text\" name=\"second\"></td></tr>";
     echo "<tr><td>3</td>";
