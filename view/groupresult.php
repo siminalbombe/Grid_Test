@@ -25,6 +25,7 @@ include '../php/checkforlogin.php';
 <h2>Erstellte Umfrage</h2><br>
 <div class="div" >
     <?php
+
     include '../db/uploadGroup.php';
     ?>
 </div>

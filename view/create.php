@@ -24,9 +24,9 @@ include '../php/checkforlogin.php';
 <body>
 <h2>Konfiguration</h2><br>
 <div class="div" >
-    <form action="createGroupResult.php">
+    <form action="groupresult.php">
         Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:<br>
-        <?php include '../php/createNewGroup.php';?>
+        <?php include '../php/createTableFormForGroups.php';?>
         <br>
         <input class="button" value="Diese Umfrage erstellen" type="submit"><br>
     </form>

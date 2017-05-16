@@ -5,6 +5,7 @@
  * Date: 16/05/2017
  * Time: 14:26
  */
+session_start();
 
 $inputs[] = $_GET['name'];
 $inputs[] = $_GET['first'];

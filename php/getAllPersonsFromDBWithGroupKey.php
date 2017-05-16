@@ -21,6 +21,24 @@ function countPersons($array){
     return count($array);
 }
 
+function remove_ID_Gkey_Name($array){
+    for ($i=0; $i<=2; $i++){
+        array_shift($array);
+    }
+    return $array;
+}
+
+function removeNotExistentPersons($array){
+    $count=0;
+    foreach ($array as $val){
+        if ($val == ""){
+            unset($array[$count]);
+        }
+        $count++;
+    }
+    return $array;
+}
+
 $gkey = strtolower($_GET['gkey']);
 $_SESSION['groupkey'] = $gkey;
 
