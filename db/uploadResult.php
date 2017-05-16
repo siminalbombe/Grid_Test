@@ -65,6 +65,4 @@ echo $insert;
 if ($conn->query($insert) === TRUE) {
     echo "<br>New record created successfully.<br>";
     echo "Your ID: ".$conn->insert_id;
-} else {
-    echo "Error: " . $insert . "<br>" . $conn->error;
 }

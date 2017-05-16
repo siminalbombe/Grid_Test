@@ -6,6 +6,8 @@
  * Time: 12:51
  */
 session_start();
+include '../php/checkforlogin.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -21,11 +23,17 @@ session_start();
 
 <body>
 <h2>Konfiguration</h2><br>
-<div align="center">
-    <form action="">
-        Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:
+<div class="div" >
+    <form action="createGroupResult.php">
+        Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:<br>
         <?php include '../php/createNewGroup.php';?>
+        <br>
         <input class="button" value="Diese Umfrage erstellen" type="submit"><br>
+    </form>
+    <br>
+
+    <form action="../view/config.php">
+        <input class="button" type="submit" value="Zurück">
     </form>
 </div>
 </body>

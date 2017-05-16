@@ -8,7 +8,6 @@
 include '../php/checkforlogin.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -30,9 +29,14 @@ include '../php/checkforlogin.php';
     <form action="analyse.php">
         <input class="button" value="Umfrage analysieren" type="submit">
     </form>
+    <form action="showAllGroups.php">
+        <input class="button" value="Existierende Umfragen" >
+    </form>
+    <br>
     <form action="logout.php">
         <input class="button" value="Logout" type="submit">
     </form>
+
 </div>
 </body>
 </html>
