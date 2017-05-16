@@ -30,15 +30,15 @@ function getEverySecond($all, $stripcount){
  */
 function stripArray($all, $stripcount)
 {
-//Delete first unnecessary attributes
+    //Delete first unnecessary attributes
     for ($i = 0; $i <= $stripcount - 1; $i++) {
         array_shift($all);
     }
     echo "<br>ATTRIBUTES (STRIPPED-FIRST): ";
     print_r($all);
-
+    $maxarray = count($all);
     //Delete last unnecessary attributes
-    for ($i = 0; $i <= (count($all)-$stripcount); $i--) {
+    for ($i = $maxarray; $i >= 2; $i--) {
         array_pop($all);
     }
     echo "<br>ATTRIBUTES (STRIPPED-LAST): ";
