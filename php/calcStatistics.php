@@ -7,6 +7,10 @@
  */
 session_start();
 
+if ($_SESSION['ini'] == true){
+    $id = 1;
+    $_SESSION['ini'] = false;
+}
 
 $selectedOption = $_GET['groupname'];
 $id = substr($selectedOption, -2,1);
@@ -55,10 +59,38 @@ $stmts[] = $stmt18;
 $stmts[] = $stmt19;
 $stmts[] = $stmt20;
 
+$names = array();
+$selectPersonNames = "SELECT first, second, third, fourth, fifth, sixth, seventh, eigth, ninth, tenth, 
+            eleventh, twelth, thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eigteenth, nineteenth, twentieth FROM grid.group WHERE ID = ".$id.";";
+$result = $conn->query($selectPersonNames);
+while ($row = $result->fetch_assoc()) {
+    $names[0] = $row['first'];
+    $names[1] = $row['second'];
+    $names[2] = $row['third'];
+    $names[3] = $row['fourth'];
+    $names[4] = $row['fifth'];
+    $names[5] = $row['sixth'];
+    $names[6] = $row['seventh'];
+    $names[7] = $row['eigth'];
+    $names[8] = $row['ninth'];
+    $names[9] = $row['tenth'];
+    $names[10] = $row['eleventh'];
+    $names[11] = $row['twelth'];
+    $names[12] = $row['thirteenth'];
+    $names[13] = $row['fourteenth'];
+    $names[14] = $row['fifteenth'];
+    $names[15] = $row['sixteenth'];
+    $names[16] = $row['seventeenth'];
+    $names[17] = $row['eigteenth'];
+    $names[18] = $row['nineteenth'];
+    $names[19] = $row['twentieth'];
+}
+
 $counter = 0;
 foreach ($stmts as $query){
     $result = $conn->query($query);
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row['name']."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
+        echo "<tr><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
+        $counter++;
     }
 }

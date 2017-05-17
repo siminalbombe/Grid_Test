@@ -39,7 +39,7 @@ function getValues($konkordanz, $diskordanz){
 session_start();
 include 'connect.php';
 
-echo "Group Key: ".$_SESSION['groupkey']."<br>";
+//echo "Group Key: ".$_SESSION['groupkey']."<br>";
 
 $stmt = "SELECT ID FROM grid.group where groupkey='".$_SESSION['groupkey']."'";
 $id = null;
@@ -51,7 +51,6 @@ while ($row = $result->fetch_assoc()) {
     }
 }
 
-echo "Group-ID: ".$id."<br>";
 
 $konkordanz = $_SESSION['Konkordanz'];
 $diskordanz = $_SESSION['Diskordanz'];
@@ -60,9 +59,10 @@ $columns = getColumns();
 $values = getValues($konkordanz, $diskordanz);
 
 $insert = "INSERT INTO grid.proband (".$columns.", groupID) values(".$values.",".$id.")";
-echo $insert;
+//echo $insert;
+//echo "Group-ID: ".$id."<br>";
 
 if ($conn->query($insert) === TRUE) {
-    echo "<br>New record created successfully.<br>";
-    echo "Your ID: ".$conn->insert_id;
+    //echo "<br>New record created successfully.<br>";
+    //echo "Your ID: ".$conn->insert_id;
 }

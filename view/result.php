@@ -16,6 +16,12 @@ session_start();
 
 <body>
 <h2>Grid - Result</h2>
+<div class="div">
+    Die Umfrage ist beendet.<br>
+    Die können sich im untern dargestellten Diagram ihre Ergebnisse ansehen.<br>
+    Ihre Ergebnisse wurden erfasst.<br>
+    Sie können diese Seite nun verlassen.<br><br>
+</div>
 
 <?php
 include '../php/calcResults.php';

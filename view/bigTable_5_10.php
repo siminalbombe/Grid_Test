@@ -17,10 +17,14 @@ session_start();
 <body>
 <h2>Grid - Teil III</h2>
 
-<?php
-include '../php/calcResults.php';
-include '../php/displayCheckboxesSECOND.php';
-?>
+
+<div class="div">
+    <?php
+    include '../php/calcResults.php';
+    include '../php/displayCheckboxesSECOND.php';
+    ?>
+</div>
+
 
 </body>
 </html>

@@ -59,8 +59,8 @@ foreach ($temp2 as $item){
 $_SESSION['Konkordanz'] = $tempKonkordanz;
 $_SESSION['Diskordanz'] = $tempDiskordanz;
 
-echo "Konkordanz: ";
+/*echo "Konkordanz: ";
 print_r($_SESSION['Konkordanz']);
 echo "<br>Diskordanz: ";
 print_r($_SESSION['Diskordanz']);
-echo "<br>";
+echo "<br>";*/

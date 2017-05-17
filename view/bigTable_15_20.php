@@ -15,16 +15,20 @@ session_start();
 
 <body>
 <h2>Grid - Teil V</h2>
-<?php
-/**
- * Created by PhpStorm.
- * User: simon.hofmann
- * Date: 08/05/2017
- * Time: 11:10
- */
 
-include '../php/calcResults.php';
-include '../php/displayCheckboxesFOUR.php';
-?>
+<div class="div">
+    <?php
+    /**
+     * Created by PhpStorm.
+     * User: simon.hofmann
+     * Date: 08/05/2017
+     * Time: 11:10
+     */
+
+    include '../php/calcResults.php';
+    include '../php/displayCheckboxesFOUR.php';
+    ?>
+</div>
+
 </body>
 </html>

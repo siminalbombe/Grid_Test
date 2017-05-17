@@ -17,7 +17,6 @@ function getEverySecond($all, $stripcount){
         }
         $counter++;
     }
-    echo "<br>";
     return $necessaryAttributes;
 }
 
@@ -43,7 +42,7 @@ function concatArray($temp, $array){
 
 function displayAttributesInDiagram($attributes){
     foreach ($attributes as $item){
-        echo "<li>".$item."</li>";
+        echo "<tr><td style=\"min-width:200px\">".$item."</td></tr>";
 
     }
 }
@@ -75,7 +74,7 @@ $temp = getEverySecond($attributes,13);
 $aufsuchen = concatArray($temp, $aufsuchen);
 
 
-echo "<b>Akzeptieren:</b> ";
+/*echo "<b>Akzeptieren:</b> ";
 print_r($akzeptieren);
 
 echo "<b>Kritisieren:</b> ";
@@ -85,7 +84,7 @@ echo "<b>Meiden:</b> ";
 print_r($meiden);
 
 echo "<br>AUFSUCHEN: ";
-print_r($aufsuchen);
+print_r($aufsuchen);*/
 ?>
 
 
@@ -95,15 +94,15 @@ print_r($aufsuchen);
     <tbody>
     <tr>
         <td><b>Kritisieren</b>
-            <ul>
+            <table border="1">
                 <?php displayAttributesInDiagram($kritisieren);?>
-            </ul>
+            </table>
         </td>
         <td></td>
         <td><b>Akzeptieren</b>
-            <ul>
+            <table border="1">
                 <?php displayAttributesInDiagram($akzeptieren);?>
-            </ul>
+            </table>
         </td>
     </tr>
     <tr>
@@ -113,15 +112,15 @@ print_r($aufsuchen);
     </tr>
     <tr>
         <td>
-            <ul><b>Meiden</b>
+            <table border="1"><b>Meiden</b>
                 <?php displayAttributesInDiagram($meiden);?>
-            </ul>
+            </table>
         </td>
         <td></td>
         <td>
-            <ul><b>Aufsuchen</b>
+            <table border="1"><b>Aufsuchen</b>
                 <?php displayAttributesInDiagram($aufsuchen);?>
-            </ul>
+            </table>
         </td>
     </tr>
     </tbody>

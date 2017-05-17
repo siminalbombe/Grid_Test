@@ -24,13 +24,17 @@ session_start();
 <h2>Login Page</h2>
 
 <div align="center">
-<form action="check.php" method="get">
-    Username<br>
-    <input type="text" name="username"><br>
-    Password<br>
-    <input type="password" name="password"><br><br>
-    <input type="submit" value="Login" class="button">
-</form>
+    <form action="check.php" method="get">
+        Username<br>
+        <input type="text" name="username"><br>
+        Password<br>
+        <input type="password" name="password"><br><br>
+        <input type="submit" value="Login" class="button">
+    </form>
+    <br>
+    <form action="../index.php">
+        <input type="submit" value="Zurück" class="button">
+    </form>
 </div>
 
 </body>
