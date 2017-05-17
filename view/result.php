@@ -20,18 +20,16 @@ session_start();
     Die Umfrage ist beendet.<br>
     Die können sich im untern dargestellten Diagram ihre Ergebnisse ansehen.<br>
     Ihre Ergebnisse wurden erfasst.<br>
-    Sie können diese Seite nun verlassen.<br><br>
+    Sie können diese Seite nun verlassen.
 </div>
-
-<?php
-include '../php/calcResults.php';
-include '../db/uploadResult.php';
-include '../php/diagram.php';
-
-?>
-<br>
-
-
+<hr>
+<div>
+    <?php
+    include '../php/calcResults.php';
+    include '../db/uploadResult.php';
+    include '../php/diagram.php';
+    ?>
+</div>
 
 </body>
 </html>

@@ -23,7 +23,7 @@ session_start();
 
 <h2>Login Page</h2>
 
-<div align="center">
+<div class="center">
     <form action="check.php" method="get">
         Username<br>
         <input type="text" name="username"><br>

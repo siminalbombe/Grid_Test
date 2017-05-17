@@ -64,5 +64,5 @@ $tempPersons = $_SESSION['persons'];
 echo "<form action=\"../view/result.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
-echo "</table><input type='submit' value='submit' class='button'>";
+echo "</table><input type='submit' value='Ergebnisse absenden' class='button'>";
 echo "</form>";

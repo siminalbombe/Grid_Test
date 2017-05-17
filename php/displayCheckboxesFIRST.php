@@ -66,10 +66,10 @@ echo "<form action=\"../view/bigTable_5_10.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
 echo "</table>";
-echo "<input type='submit' value='submit' class='button'>";
+echo "<input type='submit' value='Weiter' class='button'>";
 echo "</form>";
 $_SESSION['persons'] = $tempPersons;
 
 
 echo "<br>";
-print_r($_SESSION['attributes']);
+//print_r($_SESSION['attributes']);

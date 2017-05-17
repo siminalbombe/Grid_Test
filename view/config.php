@@ -23,7 +23,7 @@ include '../php/checkforlogin.php';
 
 <body>
 <h2>Konfiguration</h2><br>
-<div align="center">
+<div class="center">
     <form action="create.php">
         <input class="button" value="Umfrage erstellen" type="submit"><br>
     </form>

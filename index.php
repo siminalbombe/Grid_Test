@@ -14,7 +14,7 @@
 <body>
 <h2>Grid-Start Page</h2>
 <br>
-    <div align="center">
+    <div class="center">
         <form action="view/groupkey.html">
             <input type="submit" value="Start survey" class="button">
         </form>

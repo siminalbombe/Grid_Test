@@ -85,11 +85,14 @@ print_r($meiden);
 
 echo "<br>AUFSUCHEN: ";
 print_r($aufsuchen);*/
+
+include 'showResult.php';
+
 ?>
 
 
 
-<div align="center">
+<div class="center">
 <table>
     <tbody>
     <tr>

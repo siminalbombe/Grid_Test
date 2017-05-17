@@ -24,7 +24,7 @@
 
 <body>
 <h2>Logout</h2>
-<div align="center">
+<div class="center">
 
     <?php
 

@@ -24,7 +24,7 @@ include "../php/checkforlogin.php";
 
 <body>
 <h2>Analyse</h2>
-<div align="center">
+<div class="center">
     <form>
         Bitte eine Probandengruppe auswählen:<br>
         <select name="groupname">

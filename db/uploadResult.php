@@ -59,10 +59,12 @@ $columns = getColumns();
 $values = getValues($konkordanz, $diskordanz);
 
 $insert = "INSERT INTO grid.proband (".$columns.", groupID) values(".$values.",".$id.")";
+
 //echo $insert;
 //echo "Group-ID: ".$id."<br>";
 
 if ($conn->query($insert) === TRUE) {
     //echo "<br>New record created successfully.<br>";
     //echo "Your ID: ".$conn->insert_id;
+    $_SESSION['probandID'] = $conn->insert_id;
 }

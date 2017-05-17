@@ -38,8 +38,8 @@ h2 {
     /*visibility: hidden;*/
 }
 
-.persons {
-
+.center {
+    text-align: center;
 }
 
 .checkboxBig {

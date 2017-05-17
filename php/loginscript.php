@@ -17,10 +17,11 @@ $result = $conn->query($select);
 while ($row = $result->fetch_assoc()) {
     $dbpassword = $row['login'];
 }
-echo "<div align='center'>";
+echo "<div class='center'>";
 if (password_verify($password, $dbpassword) == true){
     $_SESSION['user'] = $username;
-    die('Login erfolgreich.<br> Weiter zu <a href="config.php">Config.php</a>');
+    echo "<h2>Login</h2>";
+    die('<p>Login erfolgreich.</p> <a href="config.php">Weiter zu Config.php</a>');
 }
 else{
     echo "Invalid input<br>Please try again!";

@@ -90,7 +90,10 @@ $counter = 0;
 foreach ($stmts as $query){
     $result = $conn->query($query);
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
+        if ($names[$counter] == "")
+            echo "<tr hidden><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
+        else
+            echo "<tr><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
         $counter++;
     }
 }
