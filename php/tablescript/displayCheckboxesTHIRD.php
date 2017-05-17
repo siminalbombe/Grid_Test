@@ -61,8 +61,8 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action=\"table4.php\"><tablescript border='1'>";
+echo "<form action=\"table4.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
-echo "</tablescript><input type='submit' value='Weiter' class='button'>";
+echo "</table><input type='submit' value='Weiter' class='button'>";
 echo "</form>";

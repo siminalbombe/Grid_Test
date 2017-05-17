@@ -62,10 +62,10 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action=\"table2.php\"><tablescript border='1'>";
+echo "<form action=\"table2.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
-echo "</tablescript>";
+echo "</table>";
 echo "<input type='submit' value='Weiter' class='button'>";
 echo "</form>";
 $_SESSION['persons'] = $tempPersons;

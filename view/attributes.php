@@ -19,12 +19,12 @@ function displayTable($tablenr)
 
 function displayTablefor6Attributes($tablenr)
 {
-    echo "<tablescript>";
+    echo "<table>";
     echo "<tr><td>Beschreibung</td><td>Gegenteil</td></tr>";
     for ($row=0;$row<=2;$row++) {
         displayRowInTable($tablenr, $row);
     }
-    echo "</tablescript>";
+    echo "</table>";
 }
 
 function displayRowInTable($tablenr,$row)
@@ -39,6 +39,13 @@ function displayRowInTable($tablenr,$row)
 function displayFieldInTable($tablenr, $row, $index)
 {
     $name = $tablenr."_".$row."_".$index;
+    $placeholder = null;
+
+    /*if($index%2 == 0)
+        $placeholder = "Beschreibung";
+    else
+        $placeholder = "Gegenteil";*/
+
     echo "<td><input type=\"text\" name=\"$name\" ></td>";
 }
 
