@@ -93,7 +93,7 @@ foreach ($stmts as $query){
         if ($names[$counter] == "")
             echo "<tr hidden><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
         else
-            echo "<tr><td>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
+            echo "<tr><td style='text-align: left'>".$names[$counter]."</td><td>".$row['MWKon']."</td><td>".$row['MWDis']."</td></tr>";
         $counter++;
     }
 }

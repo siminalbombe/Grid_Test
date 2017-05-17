@@ -8,6 +8,12 @@
 
 session_start();
 include "../php/checkforlogin.php";
+function displayGroup(){
+    if ($_SESSION['ini'] === false){
+        $group = $_SESSION['groupname'];
+        echo "Group: ". substr($_SESSION['groupname'],0, strrpos($group,"("));
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +25,7 @@ include "../php/checkforlogin.php";
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Analyse</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
@@ -29,7 +35,7 @@ include "../php/checkforlogin.php";
         Bitte eine Probandengruppe auswählen:<br>
         <select name="groupname">
             <?php
-            include '../php/getAllGroupsForSelect.php';
+            include '../../php/getAllGroupsForSelect.php';
             ?>
         </select>
         <br>
@@ -37,15 +43,15 @@ include "../php/checkforlogin.php";
         <input type="submit" value="submit" class="button">
     </form>
     <br>
-
-    <table border="1">
+    <table border="1" align="center">
         <th style="visibility: hidden"></th> <th colspan="2" style="text-align: center">Mittelwert</th>
-        <tr><td>Personentypen</td><td>Konkordanz</td><td>Diskordanz</td></tr>
+        <tr style="background-color:#C8C8C8" ><td>Personentypen</td><td>Konkordanz</td><td>Diskordanz</td></tr>
 
         <?php
-            include '../php/calcStatistics.php';
+            include '../../php/calcStatistics.php';
         ?>
     </table>
+    <p>Group: <?php displayGroup();?></p>
     <br>
     <form action="config.php">
         <input class="button" value="Zurück" type="submit">

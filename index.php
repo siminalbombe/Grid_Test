@@ -18,7 +18,7 @@
         <form action="view/groupkey.html">
             <input type="submit" value="Start survey" class="button">
         </form>
-        <form action="view/login.php">
+        <form action="view/admin/login.php">
             <input type="submit" value="Log In" class="button""><br>
         </form>
     </div>

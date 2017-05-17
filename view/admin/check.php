@@ -1,6 +1,15 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: simon.hofmann
+ * Date: 13/05/2017
+ * Time: 21:52
+ */
+
 session_start();
+include '../db/connect.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="de">
@@ -10,21 +19,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Grid-Teil III</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <title>GRID-Login</title>
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
-<h2>Grid - Teil III</h2>
-
-
-<div class="divleft">
-    <?php
-    include '../php/calcResults.php';
-    include '../php/displayCheckboxesSECOND.php';
-    ?>
-</div>
-
-
+<?php
+include '../../php/loginscript.php';
+?>
 </body>
 </html>

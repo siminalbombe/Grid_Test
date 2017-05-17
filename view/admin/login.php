@@ -16,7 +16,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Login</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@ session_start();
         <input type="submit" value="Login" class="button">
     </form>
     <br>
-    <form action="../index.php">
+    <form action="../../index.php">
         <input type="submit" value="Zurück" class="button">
     </form>
 </div>

@@ -41,7 +41,7 @@ function toggleField($array, $table, $row){
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Grid-Teil II</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@ function toggleField($array, $table, $row){
 <div class="divleft">
     <?php
     $attributes = getAttributesInArray();
-    include '../php/displayCheckboxesFIRST.php';
+    include '../../php/table/displayCheckboxesFIRST.php';
     ?>
 </div>
 

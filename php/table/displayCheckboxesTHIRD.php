@@ -7,7 +7,6 @@
  */
 
 session_start();
-$_SESSION['sites'] = array("bigTable_5_10.php", "bigTable_10_15.php", "bigTable_15_20.php");
 
 function displayFirstRow($persons){
     echo "<tr>";
@@ -62,7 +61,7 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action=\"../view/bigTable_15_20.php\"><table border='1'>";
+echo "<form action=\"table4.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
 echo "</table><input type='submit' value='Weiter' class='button'>";

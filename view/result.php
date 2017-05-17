@@ -15,24 +15,6 @@ session_start();
 </head>
 
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
-<script>
-    var doc = new jsPDF();
-    var specialElementHandlers = {
-        '#editor': function (element, renderer) {
-            return true;
-        }
-    };
-
-    $('#cmd').click(function () {
-        doc.fromHTML($('#results').html(), 15, 15, {
-            'width': 170,
-            'elementHandlers': specialElementHandlers
-        });
-        doc.save('sample-file.pdf');
-    });
-</script>
-
 
 <h2>Grid - Result</h2>
 <div class="divleft">
@@ -49,9 +31,9 @@ session_start();
     include '../php/diagram.php';
     ?>
 </div>
-<div class="center" id="editor">
-    <button id="cmd">PDF Download</button>
-</div>
+<form action="../index.php" >
+    <input type="submit" class="button" style="position: absolute; bottom: 0px;" value="Zur Startseite">
+</form>
 
 </body>
 </html>

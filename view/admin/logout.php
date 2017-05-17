@@ -2,12 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: simon.hofmann
- * Date: 13/05/2017
- * Time: 21:52
+ * Date: 14/05/2017
+ * Time: 09:36
  */
 
-session_start();
-include '../db/connect.php';
+
 ?>
 
 
@@ -19,13 +18,23 @@ include '../db/connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>GRID-Login</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <title>GRID-Logout</title>
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
-<?php
-include '../php/loginscript.php';
-?>
+<h2>Logout</h2>
+<div class="center">
+
+    <?php
+
+    session_start();
+    session_destroy();
+
+    echo "<p>Logout erfolgreich</p>";
+    ?>
+    <a href="../../index.php">Weiter zur Startseite</a>
+</div>
+
 </body>
 </html>

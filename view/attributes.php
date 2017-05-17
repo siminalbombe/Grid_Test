@@ -61,7 +61,7 @@ function displayFieldInTable($tablenr, $row, $index)
 <div class="divleft">
 <p>Bitte beschreiben Sie sich in ihrer beruflichen Umgebung anhand der folgenden Aussagen mit 3 Adjektiven und ihren Gegenteilen. </p>
 
-<form action="bigTable_0_5.php" method="get">
+<form action="table/table1.php" method="get">
     <h6>1. So bin ich und so möchte ich auch bleiben</h6>
     <?php
     $tablenr = displayTable($tablenr);

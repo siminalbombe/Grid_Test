@@ -9,17 +9,24 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Grid-Teil IV</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <title>Grid-Teil V</title>
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
-<h2>Grid - Teil IV</h2>
+<h2>Grid - Teil V</h2>
 
 <div class="divleft">
     <?php
-    include '../php/calcResults.php';
-    include '../php/displayCheckboxesTHIRD.php';
+    /**
+     * Created by PhpStorm.
+     * User: simon.hofmann
+     * Date: 08/05/2017
+     * Time: 11:10
+     */
+
+    include '../../php/calcResults.php';
+    include '../../php/table/displayCheckboxesFOUR.php';
     ?>
 </div>
 

@@ -18,7 +18,7 @@ include '../php/checkforlogin.php';
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Config</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
@@ -30,9 +30,9 @@ include '../php/checkforlogin.php';
     <form action="analyse.php">
         <input class="button" value="Umfrage analysieren" type="submit">
     </form>
-    <form action="showAllGroups.php">
+    <!--<form action="showAllGroups.php">
         <input class="button" value="Existierende Umfragen" >
-    </form>
+    </form>-->
     <br>
     <form action="logout.php">
         <input class="button" value="Logout" type="submit">

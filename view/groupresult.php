@@ -28,13 +28,13 @@ include '../php/checkforlogin.php';
     include '../php/checkValidInput.php';
     if ($_SESSION['invalidInput']){
         echo "Die Eingaben sind nicht für die Datenbank zulässig.<br> Vermeiden sie Ausdrücke wie DROP, etc. (SQL-Befehle).";
-        echo "<form action='create.php'><input type='submit' class='button' value='Zurück'></form>";
+        echo "<form action='admin/create.php'><input type='submit' class='button' value='Zurück'></form>";
     }
     else {
         include '../db/uploadGroup.php';
     }
     ?>
-    <form action="config.php">
+    <form action="admin/config.php">
         <input type="submit" value="Zurück" class="button">
     </form>
 </div>

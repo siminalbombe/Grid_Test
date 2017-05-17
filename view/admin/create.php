@@ -6,7 +6,7 @@
  * Time: 12:51
  */
 session_start();
-include '../php/checkforlogin.php';
+include '../../php/checkforlogin.php';
 
 ?>
 <!DOCTYPE html>
@@ -18,21 +18,21 @@ include '../php/checkforlogin.php';
     <meta name="description" content="">
     <meta name="author" content="">
     <title>GRID-Umfrage erstellen</title>
-    <link rel="stylesheet" href="../bootstrap_min.css">
+    <link rel="stylesheet" href="../../bootstrap_min.css">
 </head>
 
 <body>
 <h2>Konfiguration</h2><br>
 <div class="divleft" >
-    <form action="groupresult.php">
+    <form action="../groupresult.php">
         Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:<br>
-        <?php include '../php/createTableFormForGroups.php';?>
+        <?php include '../../php/createTableFormForGroups.php';?>
         <br>
         <input class="button" value="Diese Umfrage erstellen" type="submit"><br>
     </form>
     <br>
 
-    <form action="../view/config.php">
+    <form action="config.php">
         <input class="button" type="submit" value="Zurück">
     </form>
 </div>

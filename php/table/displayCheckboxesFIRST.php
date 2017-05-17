@@ -62,7 +62,7 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action=\"../view/bigTable_5_10.php\"><table border='1'>";
+echo "<form action=\"table2.php\"><table border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
 echo "</table>";
