@@ -26,7 +26,7 @@ session_start();
      */
 
     include '../../php/calcResults.php';
-    include '../../php/table/displayCheckboxesFOUR.php';
+    include '../../php/tablescript/displayCheckboxesFOUR.php';
     ?>
 </div>
 

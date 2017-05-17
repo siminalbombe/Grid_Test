@@ -5,7 +5,7 @@
  * Date: 14/05/2017
  * Time: 01:54
  */
-include '../php/checkforlogin.php';
+include '../../php/adminscript/checkforlogin.php';
 
 ?>
 

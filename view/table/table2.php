@@ -21,7 +21,7 @@ session_start();
 <div class="divleft">
     <?php
     include '../../php/calcResults.php';
-    include '../../php/table/displayCheckboxesSECOND.php';
+    include '../../php/tablescript/displayCheckboxesSECOND.php';
     ?>
 </div>
 

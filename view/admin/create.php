@@ -6,7 +6,7 @@
  * Time: 12:51
  */
 session_start();
-include '../../php/checkforlogin.php';
+include '../../php/adminscript/checkforlogin.php';
 
 ?>
 <!DOCTYPE html>

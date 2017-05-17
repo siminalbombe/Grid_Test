@@ -19,12 +19,12 @@ function displayTable($tablenr)
 
 function displayTablefor6Attributes($tablenr)
 {
-    echo "<table>";
+    echo "<tablescript>";
     echo "<tr><td>Beschreibung</td><td>Gegenteil</td></tr>";
     for ($row=0;$row<=2;$row++) {
         displayRowInTable($tablenr, $row);
     }
-    echo "</table>";
+    echo "</tablescript>";
 }
 
 function displayRowInTable($tablenr,$row)

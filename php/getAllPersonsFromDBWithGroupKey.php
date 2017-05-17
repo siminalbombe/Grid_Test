@@ -67,13 +67,13 @@ else{
     else{
         echo "Group Key: <b>".$_GET['gkey']."</b><br>";
         echo "Anzahl Typen: <b>".$_SESSION['numberofpersons']."</b><br><br>";
-        echo "<table>";
+        echo "<tablescript>";
         $indexOfPersons=0;
         foreach ($persons as $val){
             printArray($val, $indexOfPersons);
             $indexOfPersons++;
         }
-        echo "</table>";
+        echo "</tablescript>";
     }
 
 }

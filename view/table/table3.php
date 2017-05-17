@@ -19,7 +19,7 @@ session_start();
 <div class="divleft">
     <?php
     include '../../php/calcResults.php';
-    include '../../php/table/displayCheckboxesTHIRD.php';
+    include '../../php/tablescript/displayCheckboxesTHIRD.php';
     ?>
 </div>
 

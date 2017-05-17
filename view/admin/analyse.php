@@ -48,7 +48,7 @@ function displayGroup(){
         <tr style="background-color:#C8C8C8" ><td>Personentypen</td><td>Konkordanz</td><td>Diskordanz</td></tr>
 
         <?php
-            include '../../php/calcStatistics.php';
+            include '../../php/adminscript/calcStatistics.php';
         ?>
     </table>
     <p>Group: <?php displayGroup();?></p>

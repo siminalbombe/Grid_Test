@@ -15,22 +15,23 @@ function displayFirstRow($persons){
 
     $counter = 0;
     foreach ($persons as $item) {
-        if ($counter>=18 && $counter<=22){
+        if ($item =="" || $item==null){
+            echo "<td hidden></td>";
+        }
+        else if ($counter>=13 && $counter<=17){
             allTypesInFirstRow($item);
         }
-
-        if ($counter>=22){
+        else if ($counter>=18){
             echo "</tr>";
             $_SESSION['counter'] = $counter;
             return $persons;
         }
-
         $counter++;
     }
 }
 
 function allTypesInFirstRow($type){
-    echo "<td>".$type."</td>";
+    echo "<td class=\"persons\">".$type."</td>";
 }
 
 function displayTableForInput($attributes){
@@ -60,8 +61,8 @@ $tempAttributes = $_SESSION['attributes'];
 
 $tempPersons = $_SESSION['persons'];
 
-echo "<form action='../../view/result.php'><table border='1'>";
+echo "<form action=\"table4.php\"><tablescript border='1'>";
 $tempPersons = displayFirstRow($tempPersons);
 displayTableForInput($tempAttributes);
-echo "</table><input type='submit' value='Ergebnisse absenden' class='button'>";
+echo "</tablescript><input type='submit' value='Weiter' class='button'>";
 echo "</form>";

@@ -15,7 +15,7 @@ function iterateThroughTables(){
     }
     return $array;
 }
-//iterate through all rows of attribute table
+//iterate through all rows of attribute tablescript
 function iterateThroughRows($array, $table){
     for ($row=0; $row<=2; $row++){
         $array = toggleField($array, $table, $row);
@@ -50,7 +50,7 @@ function toggleField($array, $table, $row){
 <div class="divleft">
     <?php
     $attributes = getAttributesInArray();
-    include '../../php/table/displayCheckboxesFIRST.php';
+    include '../../php/tablescript/displayCheckboxesFIRST.php';
     ?>
 </div>
 

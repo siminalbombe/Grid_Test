@@ -60,10 +60,10 @@ while ($row = $result->fetch_assoc()) {
 
 $_SESSION['persons'] = $persons;
 $_SESSION['numberofpersons'] = countPersons($persons);
-echo "<table>";
+echo "<tablescript>";
 $indexOfPersons=0;
 foreach ($persons as $val){
     printArray($val, $indexOfPersons);
     $indexOfPersons++;
 }
-echo "</table>";
+echo "</tablescript>";

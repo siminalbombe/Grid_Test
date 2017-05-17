@@ -7,7 +7,7 @@
  */
 
 session_start();
-include '../db/connect.php';
+include '../../db/connect.php';
 ?>
 
 
@@ -25,7 +25,7 @@ include '../db/connect.php';
 
 <body>
 <?php
-include '../../php/loginscript.php';
+include '../../php/adminscript/loginscript.php';
 ?>
 </body>
 </html>
