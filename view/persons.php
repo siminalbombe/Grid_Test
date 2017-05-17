@@ -43,7 +43,7 @@ include '../db/connect.php';
         <?php
         include '../php/getAllPersonsFromDBWithGroupKey.php';
         ?>
-        <input type="submit" class="button"
+        <input type="submit" class="button" value="Umfrage starten"
             <?php
                 if ($_SESSION['gkeyfalse'])
                     echo "hidden";
@@ -53,6 +53,9 @@ include '../db/connect.php';
     <form action='groupkey.html' <?php if($_SESSION['gkeyfalse'] == false) echo "hidden";?>>
         False Group Key entered!<br>
         <input type='submit' value='Zurück' class="button">
+    </form>
+    <form action="groupkey.html" <?php if(!$_SESSION['gkeyfalse'] == false) echo "hidden";?>>
+        <input type="submit" class="button" value="Zurück">
     </form>
 </div>
 
