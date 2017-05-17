@@ -47,7 +47,7 @@ function toggleField($array, $table, $row){
 <body>
 <h2>Grid - Teil II</h2>
 
-<div class="div">
+<div class="divleft">
     <?php
     $attributes = getAttributesInArray();
     include '../php/displayCheckboxesFIRST.php';

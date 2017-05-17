@@ -92,7 +92,7 @@ include 'showResult.php';
 
 
 
-<div class="center">
+<div class="divright" style="float: right">
 <table>
     <tbody>
     <tr>
@@ -110,7 +110,7 @@ include 'showResult.php';
     </tr>
     <tr>
         <td></td>
-        <td><img src="../img/Handlungstendenzen.png"></td>
+        <td><img src="../img/Handlungstendenzen.png" id="handlungstendenzen"></td>
         <td></td>
     </tr>
     <tr>

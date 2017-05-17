@@ -23,7 +23,7 @@ include '../php/checkforlogin.php';
 
 <body>
 <h2>Erstellte Umfrage</h2><br>
-<div class="div" >
+<div class="divleft" >
     <?php
     include '../php/checkValidInput.php';
     if ($_SESSION['invalidInput']){

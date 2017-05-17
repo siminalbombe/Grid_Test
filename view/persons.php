@@ -20,7 +20,7 @@ include '../db/connect.php';
 <h2>
     Person Types for specific Group
 </h2>
-<div class="div">
+<div class="divleft">
 <p>
     <?php
     $text = "Im Folgenden finden sie eine Liste von allgemein charakterisierten Personen.<br>
@@ -38,7 +38,7 @@ include '../db/connect.php';
     ?>
 </div>
 <hr>
-<div class="div">
+<div class="divleft">
     <form action="attributes.php" method="get" >
         <?php
         include '../php/getAllPersonsFromDBWithGroupKey.php';

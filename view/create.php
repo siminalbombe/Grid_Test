@@ -23,7 +23,7 @@ include '../php/checkforlogin.php';
 
 <body>
 <h2>Konfiguration</h2><br>
-<div class="div" >
+<div class="divleft" >
     <form action="groupresult.php">
         Geben sie nachfolgend die Personentypen ein, die sie hinzufügen möchten:<br>
         <?php include '../php/createTableFormForGroups.php';?>

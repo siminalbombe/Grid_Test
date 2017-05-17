@@ -18,7 +18,7 @@ session_start();
 <h2>Grid - Teil III</h2>
 
 
-<div class="div">
+<div class="divleft">
     <?php
     include '../php/calcResults.php';
     include '../php/displayCheckboxesSECOND.php';

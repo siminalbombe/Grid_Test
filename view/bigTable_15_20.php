@@ -16,7 +16,7 @@ session_start();
 <body>
 <h2>Grid - Teil V</h2>
 
-<div class="div">
+<div class="divleft">
     <?php
     /**
      * Created by PhpStorm.

@@ -34,10 +34,6 @@ h2 {
     text-align: center;
 }
 
-.firsttd {
-    /*visibility: hidden;*/
-}
-
 .center {
     text-align: center;
 }
@@ -45,6 +41,17 @@ h2 {
 .checkboxBig {
     text-align: center;
 }
-.div {
+.divleft {
     padding-left: 30px;
+}
+
+.divright {
+    padding-right: 50px;
+}
+
+#handlungstendenzen{
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 400px;
 }

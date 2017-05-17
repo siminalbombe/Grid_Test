@@ -33,7 +33,7 @@ function displayResults($conn){
 ?>
 
 
-<div>
+<div class="divleft">
     <table style="float: left" border="1">
 
         <tr><td>Name</td><td>Konkordanz</td><td>Diskordanz</td></tr>
