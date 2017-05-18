@@ -22,5 +22,10 @@
             <input type="submit" value="Log In" class="button""><br>
         </form>
     </div>
+<footer>
+    Feel free to contact:<br>
+    <a href="mailto:dhbwgrid@gmail.com">dhbwgrid@gmail.com</a><br>
+    <p style="visibility: hidden;"></p>
+</footer>
 </body>
 </html>
