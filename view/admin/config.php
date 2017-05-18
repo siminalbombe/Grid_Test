@@ -6,7 +6,6 @@
  * Time: 01:54
  */
 include '../../php/adminscript/checkforlogin.php';
-
 ?>
 
 <!DOCTYPE html>

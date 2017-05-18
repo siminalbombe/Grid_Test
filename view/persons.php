@@ -22,8 +22,7 @@ include '../db/connect.php';
 </h2>
 <div class="divleft">
 <p>
-    <?php
-    $text = "Im Folgenden finden sie eine Liste von allgemein charakterisierten Personen.<br>
+    Im Folgenden finden sie eine Liste von allgemein charakterisierten Personen.<br>
     Bitte ordnen Sie diesen jeweils eine konkrete, ihnen bekannte Person aus ihrer beruflichen Gegenwart oder Vergangenheit zu.<br>
     Die gewählte Person sollte der gennannten Beschreibung möglichst genau entsprechen.<br>
     Notieren sie den Namen bitte in der jeweiligen Zeile.<br>
@@ -33,9 +32,6 @@ include '../db/connect.php';
     <p>
     Diese Seite dient ausschließlich ihrer Orientierung.<br>
     Für die Auswertung werden diese nicht benötigt und auch nicht gespeichert.
-    </p>";
-    echo $text;
-    ?>
 </div>
 <hr>
 <div class="divleft">

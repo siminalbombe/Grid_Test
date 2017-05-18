@@ -11,7 +11,7 @@ $username = (string)$_GET['username'];
 $password = (string)$_GET['password'];
 $dbpassword = null;
 
-$select = "SELECT username, login FROM grid.admin where username='".$username."'";
+$select = "SELECT username, login FROM grid.admin where username='".$username."';";
 
 $result = $conn->query($select);
 while ($row = $result->fetch_assoc()) {

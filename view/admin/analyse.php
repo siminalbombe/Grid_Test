@@ -7,7 +7,7 @@
  */
 
 session_start();
-include "../php/checkforlogin.php";
+include "../../php/adminscript/checkforlogin.php";
 function displayGroup(){
     if ($_SESSION['ini'] === false){
         $group = $_SESSION['groupname'];
