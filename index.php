@@ -23,7 +23,7 @@
         </form>
     </div>
 <footer>
-    Feel free to contact: <br>
+    Feel free to contact:<br>
     <a href="mailto:dhbwgrid@gmail.com">dhbwgrid@gmail.com</a><br>
     <p style="visibility: hidden;"></p>
 </footer>
