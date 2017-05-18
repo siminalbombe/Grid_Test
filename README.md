@@ -1,3 +1,3 @@
 grid - Project<br>
-DHBW Karlsrue <br>
+DHBW Karlsruhe <br>
 by simonhof
