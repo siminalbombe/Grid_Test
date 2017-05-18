@@ -1,2 +1,3 @@
-GRID - Project
-by siminalbombe
+grid - Project<br>
+DHBW Karlsrue <br>
+by simonhof
